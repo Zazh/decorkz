@@ -1,0 +1,82 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'dist/styles.css' %}" rel="stylesheet">
+
+    <title>{% block title %} aldeso {% endblock %}</title>
+    <meta name="description" content="{% block description %}{% if seo_description %}{{ seo_description }}{% else %}aluminium decorative solution{% endif %}{% endblock %}">
+
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+    <!-- BEGIN footer -->
+    <footer class="bg-black [ px-6 py-3 ] [ flex items-center justify-between ]">
+        <span class="text-sm uppercase tracking-wider text-white">© 2025 Компания «Aluminuim.kz»</span>
+        <div class="hidden md:block">
+            <a href="{% url 'contents:privacy' %}" class="text-sm uppercase tracking-wider text-white">Политика конфиденциальности</a>
+            <a href="{% url 'contents:cookies' %}" class="text-sm uppercase tracking-wider text-white ps-6">Политика использования куки</a>
+        </div>
+    </footer>
+
+    <!-- Sidebar -->
+    {% include "components/sidebar.html" %}
+
+    <!-- Search midal -->
+    {% include "components/search_modal.html" %}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openBtns = document.querySelectorAll('.js-modal-open');
+
+            openBtns.forEach(btn => {
+                const selector = btn.dataset.target;
+                const modal = document.querySelector(selector);
+
+                if (!modal) return;
+
+                const overlay = modal.querySelector('[data-modal-overlay]');
+                const panel = modal.querySelector('[data-modal-panel]');
+                const closeBtns = modal.querySelectorAll('[data-modal-close]');
+
+                const showModal = () => {
+                    modal.classList.remove('hidden');
+                    requestAnimationFrame(() => {
+                        overlay.classList.remove('opacity-0');
+                        panel.classList.remove('opacity-0', 'scale-95');
+                        // Вот здесь!
+                        window.dispatchEvent(new Event('open-search-modal'));
+                    });
+                };
+
+                const hideModal = () => {
+                    overlay.classList.add('opacity-0');
+                    panel.classList.add('opacity-0', 'scale-95');
+                    setTimeout(() => modal.classList.add('hidden'), 300);
+                };
+
+                btn.addEventListener('click', showModal);
+                overlay.addEventListener('click', hideModal);
+                closeBtns.forEach(el => el.addEventListener('click', hideModal));
+                document.addEventListener('keydown', e => {
+                    if (e.key === 'Escape' && !modal.classList.contains('hidden')) hideModal();
+                });
+            });
+        });
+    </script>
+
+<script>
+document.querySelectorAll('.price').forEach(el => {
+  const value = Number(el.textContent);
+  if (!isNaN(value)) {
+    el.textContent = value.toLocaleString('ru-RU');
+  }
+});
+</script>
+
+    <script type="module" defer src="{% static 'dist/js/core/alpine-init.js' %}?v={{ now|date:'U' }}"></script>
+</body>
+</html>

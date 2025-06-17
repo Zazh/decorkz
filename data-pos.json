@@ -1,0 +1,4576 @@
+[
+{
+  "model": "products.productcategory",
+  "pk": 1,
+  "fields": {
+    "title": "плинтсуы",
+    "parent": null,
+    "slug": "plintusy",
+    "image": "",
+    "cropping": ""
+  }
+},
+{
+  "model": "products.productcategory",
+  "pk": 2,
+  "fields": {
+    "title": "рейки",
+    "parent": null,
+    "slug": "rayki",
+    "image": "",
+    "cropping": ""
+  }
+},
+{
+  "model": "products.productcategory",
+  "pk": 5,
+  "fields": {
+    "title": "карнизы",
+    "parent": null,
+    "slug": "karnizy",
+    "image": "",
+    "cropping": ""
+  }
+},
+{
+  "model": "products.attribute",
+  "pk": 1,
+  "fields": {
+    "name": "длина",
+    "slug": "razmer",
+    "value_type": "decimal"
+  }
+},
+{
+  "model": "products.attribute",
+  "pk": 2,
+  "fields": {
+    "name": "ширина",
+    "slug": "shirina",
+    "value_type": "decimal"
+  }
+},
+{
+  "model": "products.attribute",
+  "pk": 3,
+  "fields": {
+    "name": "высота",
+    "slug": "atribut",
+    "value_type": "decimal"
+  }
+},
+{
+  "model": "products.attribute",
+  "pk": 4,
+  "fields": {
+    "name": "назначение",
+    "slug": "naznachenie",
+    "value_type": "str"
+  }
+},
+{
+  "model": "products.attribute",
+  "pk": 5,
+  "fields": {
+    "name": "вид",
+    "slug": "vid",
+    "value_type": "str"
+  }
+},
+{
+  "model": "products.attribute",
+  "pk": 6,
+  "fields": {
+    "name": "зазор",
+    "slug": "zazor",
+    "value_type": "decimal"
+  }
+},
+{
+  "model": "products.attribute",
+  "pk": 7,
+  "fields": {
+    "name": "подсветка",
+    "slug": "podsvetka",
+    "value_type": "bool"
+  }
+},
+{
+  "model": "products.attribute",
+  "pk": 8,
+  "fields": {
+    "name": "монтаж",
+    "slug": "montazh",
+    "value_type": "str"
+  }
+},
+{
+  "model": "products.attribute",
+  "pk": 9,
+  "fields": {
+    "name": "покрытие",
+    "slug": "pokrytie",
+    "value_type": "str"
+  }
+},
+{
+  "model": "products.attribute",
+  "pk": 10,
+  "fields": {
+    "name": "цвет",
+    "slug": "tsvet",
+    "value_type": "str"
+  }
+},
+{
+  "model": "products.attribute",
+  "pk": 11,
+  "fields": {
+    "name": "отступ",
+    "slug": "otstup",
+    "value_type": "decimal"
+  }
+},
+{
+  "model": "products.attribute",
+  "pk": 12,
+  "fields": {
+    "name": "количество рядов",
+    "slug": "kolichestvo-riadov",
+    "value_type": "int"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "title": "ADS-1",
+    "slug": "ads-1",
+    "category": 1,
+    "description": "ADS-1 Теневой плинтус  20мм (42х14,5х2500мм)",
+    "sku": "67",
+    "price": "1360.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "title": "ADS-2",
+    "slug": "ads-2",
+    "category": 1,
+    "description": "ADS-2 Теневой плинтус  (44х12х2500мм)",
+    "sku": "00004",
+    "price": "2250.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "title": "ADS-3",
+    "slug": "ads-3",
+    "category": 1,
+    "description": "ADS-3 Скрытый теневой плинтус для пола создает эффект парящей стены (11*25*2500мм)",
+    "sku": "00050",
+    "price": "1400.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "title": "ADS-4",
+    "slug": "ads-4",
+    "category": 1,
+    "description": "ADS-4 Скрытый теневой плинтус  20мм (20*16,3*2500мм)",
+    "sku": "00058",
+    "price": "1400.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "title": "ADS-5",
+    "slug": "ads-5",
+    "category": 1,
+    "description": "ADS-5 Скрытый теневой плинтус  20мм (20*13*2500мм)",
+    "sku": "00051",
+    "price": "1400.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "title": "ADS-6",
+    "slug": "ads-6",
+    "category": 1,
+    "description": "ADS-6 Теневой плинтус под подсветку  18мм (16,74х18,85х2500мм)",
+    "sku": "5565",
+    "price": "2500.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "title": "ADS-7",
+    "slug": "ads-7",
+    "category": 1,
+    "description": "ADS-7 Теневой плинтус под подсветку  30 мм (30,1х17,21ммх2500мм)",
+    "sku": "5559",
+    "price": "2500.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "title": "ADS-8",
+    "slug": "ads-8",
+    "category": 1,
+    "description": "ADS-8 Теневой плинтус под подсветку  20мм (20,08х15ммх2500мм)",
+    "sku": "6062",
+    "price": "2350.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "title": "ADS-9",
+    "slug": "ads-9",
+    "category": 1,
+    "description": "ADS-9 Теневой плинтус под подсветку  20 мм (20,08х13ммх2500мм)",
+    "sku": "6062-2",
+    "price": "1900.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "title": "ADS-10",
+    "slug": "ads-10",
+    "category": 1,
+    "description": "ADS-10 Теневой плинтус под подсветку  30мм (13х20ммх2500мм)",
+    "sku": "6238",
+    "price": "2350.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "title": "ADS-11",
+    "slug": "ads-11",
+    "category": 1,
+    "description": "ADS-11   СКРЫТЫЙ ПЛИНТУС - УСИЛЕННЫЙ  (13*80*2500мм)",
+    "sku": "6234",
+    "price": "2950.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "title": "ADS-12",
+    "slug": "ads-12",
+    "category": 1,
+    "description": "ADS-12 Теневой плинтус под подсветку  с полочкой  27мм (27х18ммх2500мм)",
+    "sku": "6099",
+    "price": "2650.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 17,
+  "fields": {
+    "title": "ADS-13",
+    "slug": "ads-13",
+    "category": 1,
+    "description": "ADS-13 Плинтус скрытого монтажа с полочкой (14,5*80*2500мм) анодированный",
+    "sku": "6098",
+    "price": "3760.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 18,
+  "fields": {
+    "title": "ADS-14",
+    "slug": "ads-14",
+    "category": 1,
+    "description": "",
+    "sku": "00066",
+    "price": "2960.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 19,
+  "fields": {
+    "title": "ADS-15",
+    "slug": "ads-15",
+    "category": 1,
+    "description": "ADS-15 Теневой плинтус черный муар  (74х14х3000мм)",
+    "sku": "00001",
+    "price": "3750.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 20,
+  "fields": {
+    "title": "ADS-16",
+    "slug": "ads-16",
+    "category": 1,
+    "description": "ADS-16 Теневой плинтус с подсветкой (состоит из 2х частей  (80х16х3000мм)",
+    "sku": "00002-00003",
+    "price": "7000.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 21,
+  "fields": {
+    "title": "ADS-17",
+    "slug": "ads-17",
+    "category": 1,
+    "description": "",
+    "sku": "00005-00006",
+    "price": "3450.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 22,
+  "fields": {
+    "title": "ADS-18",
+    "slug": "ads-18",
+    "category": 1,
+    "description": "ADS-18         Плинтус из алюминия на клипсах с кабель-каналом 100х10х3000 мм.",
+    "sku": "00053-00055",
+    "price": "4500.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 23,
+  "fields": {
+    "title": "ADS-20",
+    "slug": "ads-20",
+    "category": 1,
+    "description": "",
+    "sku": "00016",
+    "price": "1400.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 24,
+  "fields": {
+    "title": "ADS-21",
+    "slug": "ads-21",
+    "category": 1,
+    "description": "",
+    "sku": "00017",
+    "price": "1400.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 26,
+  "fields": {
+    "title": "ADS-22",
+    "slug": "ads-22",
+    "category": 1,
+    "description": "ADS-22 Micro LIGHT черный анод (21,94*16*2500мм)",
+    "sku": "6034",
+    "price": "1400.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 27,
+  "fields": {
+    "title": "ADS-23",
+    "slug": "ads-23",
+    "category": 1,
+    "description": "ADS-23  Micro 16  (16,2х6,94х2500мм)   черный , серебристый  , шампань, светлое золото",
+    "sku": "240301-02",
+    "price": "1100.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 28,
+  "fields": {
+    "title": "ADS-24",
+    "slug": "ads-24",
+    "category": 1,
+    "description": "",
+    "sku": "00015",
+    "price": "1350.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 29,
+  "fields": {
+    "title": "ADS-25",
+    "slug": "ads-25",
+    "category": 1,
+    "description": "ADS-25 Micro L MAX  (35,5х16х2500мм)   черный , серебристый  , шампань, светлое золото",
+    "sku": "240301-01",
+    "price": "1900.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 30,
+  "fields": {
+    "title": "ADS-26",
+    "slug": "ads-26",
+    "category": 1,
+    "description": "ADS-26 Micro L (26х15х2500мм)   черный , серебристый  , шампань, светлое золото",
+    "sku": "00039",
+    "price": "1400.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 31,
+  "fields": {
+    "title": "ADS-27",
+    "slug": "ads-27",
+    "category": 1,
+    "description": "ADS-27  Micro 19  (19х7х2500мм)   черный , серебристый  , шампань, светлое золото",
+    "sku": "0301-02",
+    "price": "1100.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 32,
+  "fields": {
+    "title": "ADS-28",
+    "slug": "ads-28",
+    "category": 1,
+    "description": "",
+    "sku": "00012",
+    "price": "1400.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 33,
+  "fields": {
+    "title": "ADS-29",
+    "slug": "ads-29",
+    "category": 1,
+    "description": "",
+    "sku": "00013",
+    "price": "1350.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 34,
+  "fields": {
+    "title": "ADS-30",
+    "slug": "ads-30",
+    "category": 1,
+    "description": "ADS-30  Плинтус Черный L-образный 40х10х3000 мм.",
+    "sku": "5752",
+    "price": "1550.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 35,
+  "fields": {
+    "title": "ADS-31",
+    "slug": "ads-31",
+    "category": 1,
+    "description": "ADS-31  Плинтус Черный L-образный 100х10х3000 мм.",
+    "sku": "5751",
+    "price": "3100.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 36,
+  "fields": {
+    "title": "ADS-32",
+    "slug": "ads-32",
+    "category": 1,
+    "description": "ADS-32  Плинтус Черный L-образный 60х10х3000 мм.",
+    "sku": "6206",
+    "price": "2650.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 37,
+  "fields": {
+    "title": "ADS-33",
+    "slug": "ads-33",
+    "category": 1,
+    "description": "ADS-33  Плинтус Черный L-образный 80х10х3000 мм.",
+    "sku": "5879",
+    "price": "2650.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 38,
+  "fields": {
+    "title": "ADS-34",
+    "slug": "ads-34",
+    "category": 1,
+    "description": "",
+    "sku": "00009-00008",
+    "price": "5450.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 39,
+  "fields": {
+    "title": "ADS-35",
+    "slug": "ads-35",
+    "category": 1,
+    "description": "",
+    "sku": "00009-00010",
+    "price": "5750.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 40,
+  "fields": {
+    "title": "ADS-36",
+    "slug": "ads-36",
+    "category": 1,
+    "description": "ADS-36 Теневой потол. пл. для ГК с подсветкой 12.5мм (41*35*2500мм)",
+    "sku": "150-450",
+    "price": "2500.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 41,
+  "fields": {
+    "title": "ADS-37",
+    "slug": "ads-37",
+    "category": 1,
+    "description": "ADS-37 Теневой потол. пл. для ГК с подсветкой зазор от стены 12мм    (33*32*2500мм)",
+    "sku": "00030",
+    "price": "1550.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 42,
+  "fields": {
+    "title": "ADS-38",
+    "slug": "ads-38",
+    "category": 1,
+    "description": "ADS-38 Теневой потол. пл. для ГК с подсветкой зазор от стены 9,8мм    (35,33*40*2500мм)",
+    "sku": "5345",
+    "price": "1550.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 43,
+  "fields": {
+    "title": "ADS-39",
+    "slug": "ads-39",
+    "category": 1,
+    "description": "ADS-39 Теневой потол. пл. для ГК с подсветкой   зазор от стены 15,8мм   (41,33*40*2500мм)",
+    "sku": "5349",
+    "price": "1900.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 44,
+  "fields": {
+    "title": "ADS-40",
+    "slug": "ads-40",
+    "category": 1,
+    "description": "ADS-40 Теневой потолок пл. для ГКЛ отступ 20 мм (37,7*44,5*2500 мм) анодированный",
+    "sku": "00025",
+    "price": "3900.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 45,
+  "fields": {
+    "title": "ADS-41",
+    "slug": "ads-41",
+    "category": 1,
+    "description": "ADS-41 Теневой потолок пл. для ГК с подсветкой зазор от стены 7,9 мм",
+    "sku": "00026",
+    "price": "1900.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 46,
+  "fields": {
+    "title": "ADS-42",
+    "slug": "ads-42",
+    "category": 1,
+    "description": "ADS-42 Теневой потол. пл. для ГК с подсветкой 9.5мм (47*41,1*2500мм)",
+    "sku": "5560",
+    "price": "2850.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 47,
+  "fields": {
+    "title": "ADS-43",
+    "slug": "ads-43",
+    "category": 1,
+    "description": "ADS-43 Теневой потолок пл. для ГК с боковой подсветкой 9.5мм (49,7х45,1х2500мм)",
+    "sku": "5619",
+    "price": "2800.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 48,
+  "fields": {
+    "title": "ADS-44",
+    "slug": "ads-44",
+    "category": 2,
+    "description": "ADS-44 Теневая рейка (5*12*30000мм)",
+    "sku": "5350",
+    "price": "1350.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 49,
+  "fields": {
+    "title": "ADS-45",
+    "slug": "ads-45",
+    "category": 2,
+    "description": "ADS-45 Теневая рейка черная анодированная ( 8мм*11мм*2500мм)",
+    "sku": "5721",
+    "price": "1350.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 50,
+  "fields": {
+    "title": "ADS-45-1",
+    "slug": "ads-45-1",
+    "category": 2,
+    "description": "ADS-45 Теневая рейка черная анодированная (8мм*11мм*3000мм)",
+    "sku": "5721-1",
+    "price": "1350.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 51,
+  "fields": {
+    "title": "ADS-46",
+    "slug": "ads-46",
+    "category": 2,
+    "description": "ADS-46 Теневая рейка цвет чёрный анодированный (11*11*3000мм)",
+    "sku": "5820",
+    "price": "1100.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 52,
+  "fields": {
+    "title": "ADS-47",
+    "slug": "ads-47",
+    "category": 2,
+    "description": "ADS-47 Теневая рейка черный анод  (11,8x5,4x3000мм)",
+    "sku": "00057",
+    "price": "1100.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 53,
+  "fields": {
+    "title": "ADS-48",
+    "slug": "ads-48",
+    "category": 2,
+    "description": "ADS-48 Теневая рейка черный анодированная  (9,79x10,74x3000мм)",
+    "sku": "00028",
+    "price": "1100.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 54,
+  "fields": {
+    "title": "ADS-49",
+    "slug": "ads-49",
+    "category": 2,
+    "description": "ADS-49 Теневая рейка DUAL черный анод зазор 8мм (10,4х11,8х3000мм)",
+    "sku": "00056",
+    "price": "1150.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 55,
+  "fields": {
+    "title": "ADS-50",
+    "slug": "ads-50",
+    "category": 2,
+    "description": "ADS-48 Теневая рейка черный анод  (5,84x10,23x3000мм)",
+    "sku": "00027",
+    "price": "1100.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 56,
+  "fields": {
+    "title": "ADS-51",
+    "slug": "ads-51",
+    "category": 2,
+    "description": "ADS-51 Теневая рейка черный анод  (9,01x13,9x3000мм)",
+    "sku": "5788",
+    "price": "2050.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 57,
+  "fields": {
+    "title": "ADS-52",
+    "slug": "ads-52",
+    "category": 5,
+    "description": "ADS-52 Скрытый карниз (ГКЛ) - двухрядный  3000мм",
+    "sku": "00032",
+    "price": "12400.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 58,
+  "fields": {
+    "title": "ADS-53",
+    "slug": "ads-53",
+    "category": 5,
+    "description": "ADS-53 Скрытый карниз (ГКЛ) - двухрядный  3000мм",
+    "sku": "00033",
+    "price": "13950.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 59,
+  "fields": {
+    "title": "ADS-54",
+    "slug": "ads-54",
+    "category": 5,
+    "description": "ADS-54 Скрытый карниз для потолка  двухрядный 3000мм",
+    "sku": "00040",
+    "price": "13200.00"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 60,
+  "fields": {
+    "title": "ADS-55",
+    "slug": "ads-55",
+    "category": 5,
+    "description": "ADS-55 Скрытый карниз для потолка  однорядный 3000мм",
+    "sku": "00082",
+    "price": "3900.00"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 6,
+  "fields": {
+    "product": 6,
+    "image": "product_images/ads-2/ads-2-c48fb854.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T16:37:25.707Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 7,
+  "fields": {
+    "product": 7,
+    "image": "product_images/ads-3/ads-3-624e3001.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T16:39:50.044Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 8,
+  "fields": {
+    "product": 8,
+    "image": "product_images/ads-4/ads-4-e6129c6a.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T16:42:29.434Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 9,
+  "fields": {
+    "product": 9,
+    "image": "product_images/ads-5/ads-5-6ab594c0.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T16:46:28.465Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 10,
+  "fields": {
+    "product": 10,
+    "image": "product_images/ads-6/ads-6-c5567a00.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T16:49:35.082Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 11,
+  "fields": {
+    "product": 11,
+    "image": "product_images/ads-7/ads-7-ca231ceb.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T16:52:25.655Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 12,
+  "fields": {
+    "product": 5,
+    "image": "product_images/ads-1/ads-1-301d6f0f.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T16:53:03.430Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 13,
+  "fields": {
+    "product": 12,
+    "image": "product_images/ads-8/ads-8-d6b8d69b.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T17:05:00.143Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 14,
+  "fields": {
+    "product": 13,
+    "image": "product_images/ads-9/ads-9-16119216.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T17:08:09.340Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 15,
+  "fields": {
+    "product": 14,
+    "image": "product_images/ads-10/ads-10-c4271c25.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T17:11:02.078Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 16,
+  "fields": {
+    "product": 15,
+    "image": "product_images/ads-11/ads-11-64264666.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T17:13:59.207Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 17,
+  "fields": {
+    "product": 16,
+    "image": "product_images/ads-12/ads-12-9ea1c85b.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T23:16:30.148Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 18,
+  "fields": {
+    "product": 17,
+    "image": "product_images/ads-13/ads-13-c3bce415.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T23:19:02.604Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 19,
+  "fields": {
+    "product": 18,
+    "image": "product_images/ads-14/ads-14-36040fcb.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T23:21:07.908Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 20,
+  "fields": {
+    "product": 19,
+    "image": "product_images/ads-15/ads-15-25eb02b7.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T23:23:03.217Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 21,
+  "fields": {
+    "product": 20,
+    "image": "product_images/ads-16/ads-16-56bab050.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T23:28:45.853Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 22,
+  "fields": {
+    "product": 21,
+    "image": "product_images/ads-17/ads-17-6ac81d67.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T23:31:14.835Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 23,
+  "fields": {
+    "product": 22,
+    "image": "product_images/ads-18/ads-18-6e4aed4c.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T23:34:02.725Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 24,
+  "fields": {
+    "product": 23,
+    "image": "product_images/ads-20/ads-20-892e4e08.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-13T23:37:55.310Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 25,
+  "fields": {
+    "product": 24,
+    "image": "product_images/ads-21/ads-21-7cfea83b.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-14T01:18:14.090Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 26,
+  "fields": {
+    "product": 26,
+    "image": "product_images/ads-22/ads-22-4867a58c.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-14T01:21:49.017Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 27,
+  "fields": {
+    "product": 27,
+    "image": "product_images/ads-23/ads-23-8306f27e.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-14T01:24:38.984Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 28,
+  "fields": {
+    "product": 28,
+    "image": "product_images/ads-24/ads-24-e95b0945.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-14T01:27:02.295Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 29,
+  "fields": {
+    "product": 29,
+    "image": "product_images/ads-25/ads-25-e4b72505.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T08:34:41.022Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 30,
+  "fields": {
+    "product": 30,
+    "image": "product_images/ads-26/ads-26-7b5aaad0.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T08:38:17.090Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 31,
+  "fields": {
+    "product": 31,
+    "image": "product_images/ads-27/ads-27-3af4f9b7.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T08:40:58.481Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 32,
+  "fields": {
+    "product": 32,
+    "image": "product_images/ads-28/ads-28-4af3ecf2.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T08:44:02.829Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 33,
+  "fields": {
+    "product": 33,
+    "image": "product_images/ads-29/ads-29-48562ffa.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T08:45:56.395Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 34,
+  "fields": {
+    "product": 34,
+    "image": "product_images/ads-30/ads-30-59b5f829.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T08:48:38.922Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 35,
+  "fields": {
+    "product": 35,
+    "image": "product_images/ads-31/ads-31-80d88d18.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T08:50:41.725Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 36,
+  "fields": {
+    "product": 36,
+    "image": "product_images/ads-32/ads-32-874d867f.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T08:52:39.146Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 37,
+  "fields": {
+    "product": 37,
+    "image": "product_images/ads-33/ads-33-6d5eec36.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T08:54:21.863Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 38,
+  "fields": {
+    "product": 38,
+    "image": "product_images/ads-34/ads-34-ff4b8fb2.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T08:56:14.269Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 39,
+  "fields": {
+    "product": 39,
+    "image": "product_images/ads-35/ads-35-12cd7b1b.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T08:58:19.589Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 40,
+  "fields": {
+    "product": 40,
+    "image": "product_images/ads-36/ads-36-f488fc7b.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:01:27.902Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 41,
+  "fields": {
+    "product": 41,
+    "image": "product_images/ads-37/ads-37-2e38009b.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:04:07.080Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 42,
+  "fields": {
+    "product": 42,
+    "image": "product_images/ads-38/ads-38-5eccde91.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:05:50.288Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 43,
+  "fields": {
+    "product": 43,
+    "image": "product_images/ads-39/ads-39-d7d00ee3.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:08:56.621Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 44,
+  "fields": {
+    "product": 44,
+    "image": "product_images/ads-40/ads-40-ca16cce1.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:12:51.876Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 45,
+  "fields": {
+    "product": 45,
+    "image": "product_images/ads-41/ads-41-42733341.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:20:33.016Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 46,
+  "fields": {
+    "product": 46,
+    "image": "product_images/ads-42/ads-42-dbe97999.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:23:37.539Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 47,
+  "fields": {
+    "product": 47,
+    "image": "product_images/ads-43/ads-43-e942615c.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:25:34.746Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 48,
+  "fields": {
+    "product": 48,
+    "image": "product_images/ads-44/ads-44-d5dcc955.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:30:46.369Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 49,
+  "fields": {
+    "product": 49,
+    "image": "product_images/ads-45/ads-45-b1fae890.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:35:04.186Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 50,
+  "fields": {
+    "product": 50,
+    "image": "product_images/ads-45-1/ads-45-1-a0305338.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:37:23.124Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 51,
+  "fields": {
+    "product": 51,
+    "image": "product_images/ads-46/ads-46-008b6f76.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:40:22.275Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 52,
+  "fields": {
+    "product": 52,
+    "image": "product_images/ads-47/ads-47-ce104d1f.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:45:50.356Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 53,
+  "fields": {
+    "product": 53,
+    "image": "product_images/ads-48/ads-48-8c1df03a.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:48:38.460Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 54,
+  "fields": {
+    "product": 54,
+    "image": "product_images/ads-49/ads-49-fce0f073.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:50:25.399Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 55,
+  "fields": {
+    "product": 55,
+    "image": "product_images/ads-50/ads-50-9ae9acbe.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:53:44.798Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 56,
+  "fields": {
+    "product": 56,
+    "image": "product_images/ads-51/ads-51-aa468f42.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T09:55:48.450Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 57,
+  "fields": {
+    "product": 57,
+    "image": "product_images/ads-52/ads-52-20b71dac.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T10:06:45.502Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 58,
+  "fields": {
+    "product": 58,
+    "image": "product_images/ads-53/ads-53-292b451a.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T10:09:09.957Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 59,
+  "fields": {
+    "product": 59,
+    "image": "product_images/ads-54/ads-54-566c49b6.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T10:12:00.515Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 60,
+  "fields": {
+    "product": 60,
+    "image": "product_images/ads-55/ads-55-266ca94f.jpg",
+    "cropping": "0,0,700,700",
+    "is_main": false,
+    "uploaded_at": "2025-05-15T10:14:02.429Z"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 13,
+  "fields": {
+    "product": 5,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 14,
+  "fields": {
+    "product": 5,
+    "attribute": 2,
+    "value": "14.5"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 15,
+  "fields": {
+    "product": 5,
+    "attribute": 3,
+    "value": "42"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 16,
+  "fields": {
+    "product": 5,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 17,
+  "fields": {
+    "product": 5,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 18,
+  "fields": {
+    "product": 5,
+    "attribute": 6,
+    "value": "2E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 19,
+  "fields": {
+    "product": 6,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 20,
+  "fields": {
+    "product": 6,
+    "attribute": 2,
+    "value": "12"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 21,
+  "fields": {
+    "product": 6,
+    "attribute": 3,
+    "value": "44"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 22,
+  "fields": {
+    "product": 6,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 23,
+  "fields": {
+    "product": 6,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 24,
+  "fields": {
+    "product": 6,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 25,
+  "fields": {
+    "product": 7,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 26,
+  "fields": {
+    "product": 7,
+    "attribute": 2,
+    "value": "25"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 27,
+  "fields": {
+    "product": 7,
+    "attribute": 3,
+    "value": "11"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 28,
+  "fields": {
+    "product": 7,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 29,
+  "fields": {
+    "product": 7,
+    "attribute": 8,
+    "value": "скрытый"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 30,
+  "fields": {
+    "product": 7,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 31,
+  "fields": {
+    "product": 7,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 32,
+  "fields": {
+    "product": 8,
+    "attribute": 2,
+    "value": "16.3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 33,
+  "fields": {
+    "product": 8,
+    "attribute": 3,
+    "value": "2E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 34,
+  "fields": {
+    "product": 8,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 35,
+  "fields": {
+    "product": 8,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 36,
+  "fields": {
+    "product": 8,
+    "attribute": 8,
+    "value": "скрытый"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 37,
+  "fields": {
+    "product": 8,
+    "attribute": 6,
+    "value": "2E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 38,
+  "fields": {
+    "product": 8,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 39,
+  "fields": {
+    "product": 8,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 40,
+  "fields": {
+    "product": 9,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 41,
+  "fields": {
+    "product": 9,
+    "attribute": 2,
+    "value": "13"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 42,
+  "fields": {
+    "product": 9,
+    "attribute": 3,
+    "value": "2E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 43,
+  "fields": {
+    "product": 9,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 44,
+  "fields": {
+    "product": 9,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 45,
+  "fields": {
+    "product": 9,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 46,
+  "fields": {
+    "product": 9,
+    "attribute": 8,
+    "value": "скрытый"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 47,
+  "fields": {
+    "product": 9,
+    "attribute": 6,
+    "value": "2E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 48,
+  "fields": {
+    "product": 10,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 49,
+  "fields": {
+    "product": 10,
+    "attribute": 3,
+    "value": "16.74"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 50,
+  "fields": {
+    "product": 10,
+    "attribute": 2,
+    "value": "18.85"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 51,
+  "fields": {
+    "product": 10,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 52,
+  "fields": {
+    "product": 10,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 53,
+  "fields": {
+    "product": 10,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 54,
+  "fields": {
+    "product": 10,
+    "attribute": 6,
+    "value": "18"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 55,
+  "fields": {
+    "product": 11,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 56,
+  "fields": {
+    "product": 11,
+    "attribute": 2,
+    "value": "17.21"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 57,
+  "fields": {
+    "product": 11,
+    "attribute": 3,
+    "value": "30.1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 58,
+  "fields": {
+    "product": 11,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 59,
+  "fields": {
+    "product": 11,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 60,
+  "fields": {
+    "product": 11,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 61,
+  "fields": {
+    "product": 11,
+    "attribute": 6,
+    "value": "3E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 62,
+  "fields": {
+    "product": 5,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 63,
+  "fields": {
+    "product": 12,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 64,
+  "fields": {
+    "product": 12,
+    "attribute": 3,
+    "value": "20.08"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 65,
+  "fields": {
+    "product": 12,
+    "attribute": 2,
+    "value": "15"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 66,
+  "fields": {
+    "product": 12,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 67,
+  "fields": {
+    "product": 12,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 68,
+  "fields": {
+    "product": 12,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 69,
+  "fields": {
+    "product": 12,
+    "attribute": 6,
+    "value": "2E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 70,
+  "fields": {
+    "product": 13,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 71,
+  "fields": {
+    "product": 13,
+    "attribute": 2,
+    "value": "13"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 72,
+  "fields": {
+    "product": 13,
+    "attribute": 3,
+    "value": "20.08"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 73,
+  "fields": {
+    "product": 13,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 74,
+  "fields": {
+    "product": 13,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 75,
+  "fields": {
+    "product": 13,
+    "attribute": 6,
+    "value": "2E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 76,
+  "fields": {
+    "product": 13,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 77,
+  "fields": {
+    "product": 14,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 78,
+  "fields": {
+    "product": 14,
+    "attribute": 2,
+    "value": "2E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 79,
+  "fields": {
+    "product": 14,
+    "attribute": 3,
+    "value": "13"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 80,
+  "fields": {
+    "product": 14,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 81,
+  "fields": {
+    "product": 14,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 82,
+  "fields": {
+    "product": 14,
+    "attribute": 6,
+    "value": "3E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 83,
+  "fields": {
+    "product": 14,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 84,
+  "fields": {
+    "product": 15,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 85,
+  "fields": {
+    "product": 15,
+    "attribute": 2,
+    "value": "8E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 86,
+  "fields": {
+    "product": 15,
+    "attribute": 3,
+    "value": "13"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 87,
+  "fields": {
+    "product": 15,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 88,
+  "fields": {
+    "product": 15,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 89,
+  "fields": {
+    "product": 15,
+    "attribute": 5,
+    "value": "скрытый"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 90,
+  "fields": {
+    "product": 16,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 91,
+  "fields": {
+    "product": 16,
+    "attribute": 3,
+    "value": "27"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 92,
+  "fields": {
+    "product": 16,
+    "attribute": 2,
+    "value": "18"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 93,
+  "fields": {
+    "product": 16,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 94,
+  "fields": {
+    "product": 16,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 95,
+  "fields": {
+    "product": 16,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 96,
+  "fields": {
+    "product": 17,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 97,
+  "fields": {
+    "product": 17,
+    "attribute": 3,
+    "value": "14.5"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 98,
+  "fields": {
+    "product": 17,
+    "attribute": 2,
+    "value": "8E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 99,
+  "fields": {
+    "product": 17,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 100,
+  "fields": {
+    "product": 17,
+    "attribute": 5,
+    "value": "скрытый"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 101,
+  "fields": {
+    "product": 17,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 102,
+  "fields": {
+    "product": 17,
+    "attribute": 9,
+    "value": "анодированное"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 103,
+  "fields": {
+    "product": 18,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 104,
+  "fields": {
+    "product": 18,
+    "attribute": 2,
+    "value": "8E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 105,
+  "fields": {
+    "product": 18,
+    "attribute": 3,
+    "value": "15"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 106,
+  "fields": {
+    "product": 18,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 107,
+  "fields": {
+    "product": 18,
+    "attribute": 5,
+    "value": "скрытый"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 108,
+  "fields": {
+    "product": 18,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 109,
+  "fields": {
+    "product": 19,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 110,
+  "fields": {
+    "product": 19,
+    "attribute": 3,
+    "value": "74"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 111,
+  "fields": {
+    "product": 19,
+    "attribute": 2,
+    "value": "14"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 112,
+  "fields": {
+    "product": 19,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 113,
+  "fields": {
+    "product": 19,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 114,
+  "fields": {
+    "product": 19,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 115,
+  "fields": {
+    "product": 19,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 116,
+  "fields": {
+    "product": 19,
+    "attribute": 9,
+    "value": "муар"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 117,
+  "fields": {
+    "product": 20,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 118,
+  "fields": {
+    "product": 20,
+    "attribute": 2,
+    "value": "16"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 119,
+  "fields": {
+    "product": 20,
+    "attribute": 3,
+    "value": "8E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 120,
+  "fields": {
+    "product": 20,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 121,
+  "fields": {
+    "product": 20,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 122,
+  "fields": {
+    "product": 20,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 123,
+  "fields": {
+    "product": 21,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 124,
+  "fields": {
+    "product": 21,
+    "attribute": 2,
+    "value": "13"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 125,
+  "fields": {
+    "product": 21,
+    "attribute": 3,
+    "value": "8E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 126,
+  "fields": {
+    "product": 21,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 127,
+  "fields": {
+    "product": 21,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 128,
+  "fields": {
+    "product": 21,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 129,
+  "fields": {
+    "product": 22,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 130,
+  "fields": {
+    "product": 22,
+    "attribute": 3,
+    "value": "1E+2"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 131,
+  "fields": {
+    "product": 22,
+    "attribute": 2,
+    "value": "1E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 132,
+  "fields": {
+    "product": 22,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 133,
+  "fields": {
+    "product": 22,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 134,
+  "fields": {
+    "product": 23,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 135,
+  "fields": {
+    "product": 23,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 136,
+  "fields": {
+    "product": 23,
+    "attribute": 2,
+    "value": "15"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 137,
+  "fields": {
+    "product": 23,
+    "attribute": 3,
+    "value": "28"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 138,
+  "fields": {
+    "product": 24,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 139,
+  "fields": {
+    "product": 24,
+    "attribute": 3,
+    "value": "23"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 140,
+  "fields": {
+    "product": 24,
+    "attribute": 2,
+    "value": "2E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 141,
+  "fields": {
+    "product": 24,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 142,
+  "fields": {
+    "product": 26,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 143,
+  "fields": {
+    "product": 26,
+    "attribute": 3,
+    "value": "21.94"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 144,
+  "fields": {
+    "product": 26,
+    "attribute": 2,
+    "value": "16"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 145,
+  "fields": {
+    "product": 26,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 146,
+  "fields": {
+    "product": 26,
+    "attribute": 9,
+    "value": "анодированное"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 147,
+  "fields": {
+    "product": 26,
+    "attribute": 5,
+    "value": "микро"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 148,
+  "fields": {
+    "product": 26,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 149,
+  "fields": {
+    "product": 26,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 150,
+  "fields": {
+    "product": 27,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 151,
+  "fields": {
+    "product": 27,
+    "attribute": 2,
+    "value": "6.94"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 152,
+  "fields": {
+    "product": 27,
+    "attribute": 3,
+    "value": "16.2"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 153,
+  "fields": {
+    "product": 27,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 154,
+  "fields": {
+    "product": 27,
+    "attribute": 10,
+    "value": "черный, серебристый, шампань, светлое золото"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 155,
+  "fields": {
+    "product": 27,
+    "attribute": 5,
+    "value": "микро"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 156,
+  "fields": {
+    "product": 27,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 157,
+  "fields": {
+    "product": 28,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 158,
+  "fields": {
+    "product": 28,
+    "attribute": 2,
+    "value": "16"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 159,
+  "fields": {
+    "product": 28,
+    "attribute": 3,
+    "value": "8"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 160,
+  "fields": {
+    "product": 28,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 161,
+  "fields": {
+    "product": 28,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 162,
+  "fields": {
+    "product": 29,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 163,
+  "fields": {
+    "product": 29,
+    "attribute": 3,
+    "value": "35.5"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 164,
+  "fields": {
+    "product": 29,
+    "attribute": 2,
+    "value": "16"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 165,
+  "fields": {
+    "product": 29,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 166,
+  "fields": {
+    "product": 29,
+    "attribute": 5,
+    "value": "микро"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 167,
+  "fields": {
+    "product": 29,
+    "attribute": 10,
+    "value": "серебристый, шампань, светлое золото"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 168,
+  "fields": {
+    "product": 29,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 169,
+  "fields": {
+    "product": 30,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 170,
+  "fields": {
+    "product": 30,
+    "attribute": 3,
+    "value": "26"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 171,
+  "fields": {
+    "product": 30,
+    "attribute": 2,
+    "value": "15"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 172,
+  "fields": {
+    "product": 30,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 173,
+  "fields": {
+    "product": 30,
+    "attribute": 5,
+    "value": "микро"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 174,
+  "fields": {
+    "product": 30,
+    "attribute": 10,
+    "value": "серебристый, шампань, светлое золото"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 175,
+  "fields": {
+    "product": 30,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 176,
+  "fields": {
+    "product": 31,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 177,
+  "fields": {
+    "product": 31,
+    "attribute": 3,
+    "value": "19"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 178,
+  "fields": {
+    "product": 31,
+    "attribute": 2,
+    "value": "7"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 179,
+  "fields": {
+    "product": 31,
+    "attribute": 5,
+    "value": "микро"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 180,
+  "fields": {
+    "product": 31,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 181,
+  "fields": {
+    "product": 31,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 182,
+  "fields": {
+    "product": 32,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 183,
+  "fields": {
+    "product": 32,
+    "attribute": 3,
+    "value": "15"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 184,
+  "fields": {
+    "product": 32,
+    "attribute": 2,
+    "value": "19"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 185,
+  "fields": {
+    "product": 32,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 186,
+  "fields": {
+    "product": 33,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 187,
+  "fields": {
+    "product": 33,
+    "attribute": 3,
+    "value": "8"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 188,
+  "fields": {
+    "product": 33,
+    "attribute": 2,
+    "value": "2E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 189,
+  "fields": {
+    "product": 33,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 190,
+  "fields": {
+    "product": 33,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 191,
+  "fields": {
+    "product": 34,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 192,
+  "fields": {
+    "product": 34,
+    "attribute": 2,
+    "value": "1E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 193,
+  "fields": {
+    "product": 34,
+    "attribute": 3,
+    "value": "4E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 194,
+  "fields": {
+    "product": 34,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 195,
+  "fields": {
+    "product": 34,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 196,
+  "fields": {
+    "product": 34,
+    "attribute": 5,
+    "value": "L-образный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 197,
+  "fields": {
+    "product": 34,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 198,
+  "fields": {
+    "product": 35,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 199,
+  "fields": {
+    "product": 35,
+    "attribute": 2,
+    "value": "1E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 200,
+  "fields": {
+    "product": 35,
+    "attribute": 3,
+    "value": "1E+2"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 201,
+  "fields": {
+    "product": 35,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 202,
+  "fields": {
+    "product": 35,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 203,
+  "fields": {
+    "product": 35,
+    "attribute": 5,
+    "value": "L-образный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 204,
+  "fields": {
+    "product": 35,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 205,
+  "fields": {
+    "product": 36,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 206,
+  "fields": {
+    "product": 36,
+    "attribute": 3,
+    "value": "6E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 207,
+  "fields": {
+    "product": 36,
+    "attribute": 2,
+    "value": "1E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 208,
+  "fields": {
+    "product": 36,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 209,
+  "fields": {
+    "product": 36,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 210,
+  "fields": {
+    "product": 36,
+    "attribute": 5,
+    "value": "L-образный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 211,
+  "fields": {
+    "product": 36,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 212,
+  "fields": {
+    "product": 37,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 213,
+  "fields": {
+    "product": 37,
+    "attribute": 3,
+    "value": "8E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 214,
+  "fields": {
+    "product": 37,
+    "attribute": 2,
+    "value": "1E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 215,
+  "fields": {
+    "product": 37,
+    "attribute": 5,
+    "value": "L-образный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 216,
+  "fields": {
+    "product": 37,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 217,
+  "fields": {
+    "product": 37,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 218,
+  "fields": {
+    "product": 37,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 219,
+  "fields": {
+    "product": 38,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 220,
+  "fields": {
+    "product": 38,
+    "attribute": 3,
+    "value": "7E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 221,
+  "fields": {
+    "product": 38,
+    "attribute": 2,
+    "value": "56"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 222,
+  "fields": {
+    "product": 38,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 223,
+  "fields": {
+    "product": 39,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 224,
+  "fields": {
+    "product": 39,
+    "attribute": 3,
+    "value": "66"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 225,
+  "fields": {
+    "product": 39,
+    "attribute": 2,
+    "value": "56"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 226,
+  "fields": {
+    "product": 39,
+    "attribute": 4,
+    "value": "пол"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 227,
+  "fields": {
+    "product": 40,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 228,
+  "fields": {
+    "product": 40,
+    "attribute": 2,
+    "value": "35"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 229,
+  "fields": {
+    "product": 40,
+    "attribute": 3,
+    "value": "41"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 230,
+  "fields": {
+    "product": 40,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 231,
+  "fields": {
+    "product": 40,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 232,
+  "fields": {
+    "product": 40,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 233,
+  "fields": {
+    "product": 41,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 234,
+  "fields": {
+    "product": 41,
+    "attribute": 2,
+    "value": "32"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 235,
+  "fields": {
+    "product": 41,
+    "attribute": 3,
+    "value": "33"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 236,
+  "fields": {
+    "product": 41,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 237,
+  "fields": {
+    "product": 41,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 238,
+  "fields": {
+    "product": 41,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 239,
+  "fields": {
+    "product": 42,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 240,
+  "fields": {
+    "product": 42,
+    "attribute": 3,
+    "value": "35.33"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 241,
+  "fields": {
+    "product": 42,
+    "attribute": 2,
+    "value": "4E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 242,
+  "fields": {
+    "product": 42,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 243,
+  "fields": {
+    "product": 42,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 244,
+  "fields": {
+    "product": 42,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 245,
+  "fields": {
+    "product": 43,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 246,
+  "fields": {
+    "product": 43,
+    "attribute": 2,
+    "value": "4E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 247,
+  "fields": {
+    "product": 43,
+    "attribute": 3,
+    "value": "41.33"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 248,
+  "fields": {
+    "product": 43,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 249,
+  "fields": {
+    "product": 43,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 250,
+  "fields": {
+    "product": 43,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 251,
+  "fields": {
+    "product": 44,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 252,
+  "fields": {
+    "product": 44,
+    "attribute": 3,
+    "value": "37.7"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 253,
+  "fields": {
+    "product": 44,
+    "attribute": 2,
+    "value": "44.5"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 254,
+  "fields": {
+    "product": 44,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 255,
+  "fields": {
+    "product": 44,
+    "attribute": 9,
+    "value": "анодированное"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 256,
+  "fields": {
+    "product": 44,
+    "attribute": 7,
+    "value": "Нет"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 257,
+  "fields": {
+    "product": 44,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 258,
+  "fields": {
+    "product": 44,
+    "attribute": 11,
+    "value": "2E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 259,
+  "fields": {
+    "product": 45,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 260,
+  "fields": {
+    "product": 45,
+    "attribute": 2,
+    "value": "3E+1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 261,
+  "fields": {
+    "product": 45,
+    "attribute": 3,
+    "value": "21.9"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 262,
+  "fields": {
+    "product": 45,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 263,
+  "fields": {
+    "product": 45,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 264,
+  "fields": {
+    "product": 45,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 265,
+  "fields": {
+    "product": 45,
+    "attribute": 6,
+    "value": "7.9"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 266,
+  "fields": {
+    "product": 46,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 267,
+  "fields": {
+    "product": 46,
+    "attribute": 3,
+    "value": "47"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 268,
+  "fields": {
+    "product": 46,
+    "attribute": 2,
+    "value": "41.1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 269,
+  "fields": {
+    "product": 46,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 270,
+  "fields": {
+    "product": 46,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 271,
+  "fields": {
+    "product": 46,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 272,
+  "fields": {
+    "product": 47,
+    "attribute": 1,
+    "value": "2.5E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 273,
+  "fields": {
+    "product": 47,
+    "attribute": 3,
+    "value": "49.7"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 274,
+  "fields": {
+    "product": 47,
+    "attribute": 2,
+    "value": "45.1"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 275,
+  "fields": {
+    "product": 47,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 276,
+  "fields": {
+    "product": 47,
+    "attribute": 7,
+    "value": "Да"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 277,
+  "fields": {
+    "product": 47,
+    "attribute": 5,
+    "value": "теневой"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 278,
+  "fields": {
+    "product": 41,
+    "attribute": 6,
+    "value": "12"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 279,
+  "fields": {
+    "product": 42,
+    "attribute": 6,
+    "value": "9.8"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 280,
+  "fields": {
+    "product": 43,
+    "attribute": 6,
+    "value": "15.8"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 281,
+  "fields": {
+    "product": 48,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 282,
+  "fields": {
+    "product": 48,
+    "attribute": 3,
+    "value": "5"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 283,
+  "fields": {
+    "product": 48,
+    "attribute": 2,
+    "value": "12"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 284,
+  "fields": {
+    "product": 48,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 285,
+  "fields": {
+    "product": 48,
+    "attribute": 5,
+    "value": "теневая"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 286,
+  "fields": {
+    "product": 49,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 287,
+  "fields": {
+    "product": 49,
+    "attribute": 2,
+    "value": "11"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 288,
+  "fields": {
+    "product": 49,
+    "attribute": 3,
+    "value": "8"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 289,
+  "fields": {
+    "product": 49,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 290,
+  "fields": {
+    "product": 49,
+    "attribute": 9,
+    "value": "анодированное"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 291,
+  "fields": {
+    "product": 49,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 292,
+  "fields": {
+    "product": 49,
+    "attribute": 5,
+    "value": "теневая"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 293,
+  "fields": {
+    "product": 50,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 294,
+  "fields": {
+    "product": 50,
+    "attribute": 2,
+    "value": "11"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 295,
+  "fields": {
+    "product": 50,
+    "attribute": 3,
+    "value": "8"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 296,
+  "fields": {
+    "product": 50,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 297,
+  "fields": {
+    "product": 50,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 298,
+  "fields": {
+    "product": 50,
+    "attribute": 9,
+    "value": "анодиорованное"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 299,
+  "fields": {
+    "product": 50,
+    "attribute": 5,
+    "value": "теневая"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 300,
+  "fields": {
+    "product": 51,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 301,
+  "fields": {
+    "product": 51,
+    "attribute": 3,
+    "value": "11"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 302,
+  "fields": {
+    "product": 51,
+    "attribute": 2,
+    "value": "11"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 303,
+  "fields": {
+    "product": 51,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 304,
+  "fields": {
+    "product": 51,
+    "attribute": 5,
+    "value": "теневая"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 305,
+  "fields": {
+    "product": 51,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 306,
+  "fields": {
+    "product": 51,
+    "attribute": 9,
+    "value": "анодированное"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 307,
+  "fields": {
+    "product": 52,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 308,
+  "fields": {
+    "product": 52,
+    "attribute": 2,
+    "value": "5.4"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 309,
+  "fields": {
+    "product": 52,
+    "attribute": 3,
+    "value": "11.8"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 310,
+  "fields": {
+    "product": 52,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 311,
+  "fields": {
+    "product": 52,
+    "attribute": 9,
+    "value": "анодированное"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 312,
+  "fields": {
+    "product": 52,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 313,
+  "fields": {
+    "product": 52,
+    "attribute": 5,
+    "value": "теневая"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 314,
+  "fields": {
+    "product": 53,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 315,
+  "fields": {
+    "product": 53,
+    "attribute": 3,
+    "value": "9.79"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 316,
+  "fields": {
+    "product": 53,
+    "attribute": 2,
+    "value": "10.74"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 317,
+  "fields": {
+    "product": 53,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 318,
+  "fields": {
+    "product": 53,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 319,
+  "fields": {
+    "product": 53,
+    "attribute": 5,
+    "value": "теневая"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 320,
+  "fields": {
+    "product": 54,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 321,
+  "fields": {
+    "product": 54,
+    "attribute": 3,
+    "value": "10.4"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 322,
+  "fields": {
+    "product": 54,
+    "attribute": 2,
+    "value": "11.8"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 323,
+  "fields": {
+    "product": 54,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 324,
+  "fields": {
+    "product": 54,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 325,
+  "fields": {
+    "product": 54,
+    "attribute": 5,
+    "value": "теневая"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 326,
+  "fields": {
+    "product": 54,
+    "attribute": 6,
+    "value": "8"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 327,
+  "fields": {
+    "product": 55,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 328,
+  "fields": {
+    "product": 55,
+    "attribute": 3,
+    "value": "5.84"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 329,
+  "fields": {
+    "product": 55,
+    "attribute": 2,
+    "value": "10.23"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 330,
+  "fields": {
+    "product": 55,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 331,
+  "fields": {
+    "product": 55,
+    "attribute": 5,
+    "value": "теневая"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 332,
+  "fields": {
+    "product": 55,
+    "attribute": 9,
+    "value": "анодированное"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 333,
+  "fields": {
+    "product": 55,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 334,
+  "fields": {
+    "product": 56,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 335,
+  "fields": {
+    "product": 56,
+    "attribute": 3,
+    "value": "9.01"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 336,
+  "fields": {
+    "product": 56,
+    "attribute": 2,
+    "value": "13.9"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 337,
+  "fields": {
+    "product": 56,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 338,
+  "fields": {
+    "product": 56,
+    "attribute": 9,
+    "value": "анодированное"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 339,
+  "fields": {
+    "product": 56,
+    "attribute": 5,
+    "value": "теневая"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 340,
+  "fields": {
+    "product": 56,
+    "attribute": 10,
+    "value": "черный"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 341,
+  "fields": {
+    "product": 57,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 342,
+  "fields": {
+    "product": 57,
+    "attribute": 2,
+    "value": "83.6"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 343,
+  "fields": {
+    "product": 57,
+    "attribute": 3,
+    "value": "69.5"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 344,
+  "fields": {
+    "product": 57,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 345,
+  "fields": {
+    "product": 57,
+    "attribute": 5,
+    "value": "скрытый"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 346,
+  "fields": {
+    "product": 57,
+    "attribute": 12,
+    "value": "2"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 347,
+  "fields": {
+    "product": 58,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 348,
+  "fields": {
+    "product": 58,
+    "attribute": 2,
+    "value": "132.7"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 349,
+  "fields": {
+    "product": 58,
+    "attribute": 3,
+    "value": "73.7"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 350,
+  "fields": {
+    "product": 58,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 351,
+  "fields": {
+    "product": 58,
+    "attribute": 5,
+    "value": "скрытый"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 352,
+  "fields": {
+    "product": 58,
+    "attribute": 12,
+    "value": "2"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 353,
+  "fields": {
+    "product": 59,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 354,
+  "fields": {
+    "product": 59,
+    "attribute": 2,
+    "value": "153.7"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 355,
+  "fields": {
+    "product": 59,
+    "attribute": 3,
+    "value": "34.95"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 356,
+  "fields": {
+    "product": 59,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 357,
+  "fields": {
+    "product": 59,
+    "attribute": 5,
+    "value": "скрытый"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 358,
+  "fields": {
+    "product": 59,
+    "attribute": 12,
+    "value": "2"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 359,
+  "fields": {
+    "product": 60,
+    "attribute": 1,
+    "value": "3E+3"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 360,
+  "fields": {
+    "product": 60,
+    "attribute": 3,
+    "value": "12.5"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 361,
+  "fields": {
+    "product": 60,
+    "attribute": 2,
+    "value": "42.6"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 362,
+  "fields": {
+    "product": 60,
+    "attribute": 4,
+    "value": "потолок"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 363,
+  "fields": {
+    "product": 60,
+    "attribute": 5,
+    "value": "скрытый"
+  }
+},
+{
+  "model": "products.productattributevalue",
+  "pk": 364,
+  "fields": {
+    "product": 60,
+    "attribute": 12,
+    "value": "1"
+  }
+}
+]

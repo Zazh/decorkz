@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+{% block title %}{{ homepage.seo_title }}{% endblock %}
+{% block description %}{{ homepage.seo_description }}{% endblock %}
+{% block content %}
+
+{% load static %}
+
+<section class="container-default">
+    <div class="hero room-1">
+        <div>
+          <svg class="w-[4rem] aspect-square" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.7463 14.44L14.8763 11.87L14.0163 14.44H15.7463Z" fill="black"/>
+            <path d="M37.2011 44.9L33.8571 35.396C33.4171 34.164 32.9771 32.932 32.9331 31.876H32.7571C32.6691 32.712 32.1851 34.032 31.6131 35.484L27.9611 44.9H37.2011Z" fill="black"/>
+            <path d="M12.46 69.21C12.46 68.7833 12.34 68.4467 12.1 68.2C11.8667 67.9533 11.58 67.83 11.24 67.83C10.9 67.83 10.61 67.9533 10.37 68.2C10.1367 68.44 10.02 68.7733 10.02 69.2C10.02 69.6267 10.1367 69.9667 10.37 70.22C10.61 70.4667 10.9 70.59 11.24 70.59C11.58 70.59 11.8667 70.4667 12.1 70.22C12.34 69.9733 12.46 69.6367 12.46 69.21Z" fill="black"/>
+            <path d="M18.8171 67.97C19.0171 68.1433 19.1171 68.3767 19.1171 68.67H16.9771C17.0238 68.3633 17.1438 68.1267 17.3371 67.96C17.5371 67.7933 17.7805 67.71 18.0671 67.71C18.3671 67.71 18.6171 67.7967 18.8171 67.97Z" fill="black"/>
+            <path d="M43.7662 70.24C43.5395 70.48 43.2629 70.6 42.9362 70.6C42.6095 70.6 42.3362 70.48 42.1162 70.24C41.9029 70 41.7962 69.6567 41.7962 69.21C41.7962 68.7567 41.9062 68.4133 42.1262 68.18C42.3462 67.94 42.6229 67.82 42.9562 67.82C43.2829 67.82 43.5562 67.94 43.7762 68.18C44.0029 68.42 44.1162 68.7633 44.1162 69.21C44.1162 69.6567 43.9995 70 43.7662 70.24Z" fill="black"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0C0.895431 0 0 0.895429 0 2V78C0 79.1046 0.895429 80 2 80H78C79.1046 80 80 79.1046 80 78V2C80 0.895431 79.1046 0 78 0H2ZM39.5828 10.58C39.7761 10.7533 40.0228 10.84 40.3228 10.84C40.6161 10.84 40.8561 10.7533 41.0428 10.58C41.2361 10.4 41.3328 10.18 41.3328 9.91999C41.3328 9.65332 41.2361 9.43332 41.0428 9.25999C40.8561 9.07999 40.6161 8.98999 40.3228 8.98999C40.0228 8.98999 39.7761 9.07999 39.5828 9.25999C39.3961 9.43332 39.3028 9.65332 39.3028 9.91999C39.3028 10.18 39.3961 10.4 39.5828 10.58ZM41.1728 17V11.42H39.4628V17H41.1728ZM20.8994 9.59999V17H19.1894V9.59999H20.8994ZM16.1863 15.76H13.5663L13.1463 17H11.3563L13.8963 9.97999H15.8763L18.4163 17H16.6063L16.1863 15.76ZM27.6486 17V11.42H25.9386V14.45C25.9386 14.8233 25.8419 15.1133 25.6486 15.32C25.4553 15.5267 25.1919 15.63 24.8586 15.63C24.5319 15.63 24.2719 15.5267 24.0786 15.32C23.8853 15.1133 23.7886 14.8233 23.7886 14.45V11.42H22.0886V14.68C22.0886 15.1667 22.1786 15.59 22.3586 15.95C22.5386 16.31 22.7919 16.5867 23.1186 16.78C23.4453 16.9667 23.8219 17.06 24.2486 17.06C24.6086 17.06 24.9353 16.9867 25.2286 16.84C25.5286 16.6867 25.7652 16.4867 25.9386 16.24V17H27.6486ZM35.9969 11.36C36.6902 11.36 37.2402 11.57 37.6469 11.99C38.0602 12.41 38.2669 12.9933 38.2669 13.74V17H36.5669V13.97C36.5669 13.61 36.4702 13.3333 36.2769 13.14C36.0902 12.94 35.8302 12.84 35.4969 12.84C35.1635 12.84 34.9002 12.94 34.7069 13.14C34.5202 13.3333 34.4269 13.61 34.4269 13.97V17H32.7269V13.97C32.7269 13.61 32.6302 13.3333 32.4369 13.14C32.2502 12.94 31.9902 12.84 31.6569 12.84C31.3235 12.84 31.0602 12.94 30.8669 13.14C30.6802 13.3333 30.5869 13.61 30.5869 13.97V17H28.8769V11.42H30.5869V12.12C30.7602 11.8867 30.9869 11.7033 31.2669 11.57C31.5469 11.43 31.8635 11.36 32.2169 11.36C32.6369 11.36 33.0102 11.45 33.3369 11.63C33.6702 11.81 33.9302 12.0667 34.1169 12.4C34.3102 12.0933 34.5735 11.8433 34.9069 11.65C35.2402 11.4567 35.6035 11.36 35.9969 11.36ZM45.812 11.36C46.4654 11.36 46.9854 11.5733 47.372 12C47.7654 12.42 47.962 13 47.962 13.74V17H46.262V13.97C46.262 13.5967 46.1654 13.3067 45.972 13.1C45.7787 12.8933 45.5187 12.79 45.192 12.79C44.8654 12.79 44.6054 12.8933 44.412 13.1C44.2187 13.3067 44.122 13.5967 44.122 13.97V17H42.412V11.42H44.122V12.16C44.2954 11.9133 44.5287 11.72 44.822 11.58C45.1154 11.4333 45.4454 11.36 45.812 11.36ZM49.2703 10.58C49.4636 10.7533 49.7103 10.84 50.0103 10.84C50.3036 10.84 50.5436 10.7533 50.7303 10.58C50.9236 10.4 51.0203 10.18 51.0203 9.91999C51.0203 9.65332 50.9236 9.43332 50.7303 9.25999C50.5436 9.07999 50.3036 8.98999 50.0103 8.98999C49.7103 8.98999 49.4636 9.07999 49.2703 9.25999C49.0836 9.43332 48.9903 9.65332 48.9903 9.91999C48.9903 10.18 49.0836 10.4 49.2703 10.58ZM50.8603 17V11.42H49.1503V17H50.8603ZM57.6095 11.42V17H55.8995V16.24C55.7262 16.4867 55.4895 16.6867 55.1895 16.84C54.8962 16.9867 54.5695 17.06 54.2095 17.06C53.7829 17.06 53.4062 16.9667 53.0795 16.78C52.7529 16.5867 52.4995 16.31 52.3195 15.95C52.1395 15.59 52.0495 15.1667 52.0495 14.68V11.42H53.7495V14.45C53.7495 14.8233 53.8462 15.1133 54.0395 15.32C54.2329 15.5267 54.4929 15.63 54.8195 15.63C55.1529 15.63 55.4162 15.5267 55.6095 15.32C55.8029 15.1133 55.8995 14.8233 55.8995 14.45V11.42H57.6095ZM67.6078 11.99C67.2011 11.57 66.6511 11.36 65.9578 11.36C65.5645 11.36 65.2011 11.4567 64.8678 11.65C64.5345 11.8433 64.2711 12.0933 64.0778 12.4C63.8911 12.0667 63.6311 11.81 63.2978 11.63C62.9711 11.45 62.5978 11.36 62.1778 11.36C61.8245 11.36 61.5078 11.43 61.2278 11.57C60.9478 11.7033 60.7211 11.8867 60.5478 12.12V11.42H58.8378V17H60.5478V13.97C60.5478 13.61 60.6411 13.3333 60.8278 13.14C61.0211 12.94 61.2845 12.84 61.6178 12.84C61.9511 12.84 62.2111 12.94 62.3978 13.14C62.5911 13.3333 62.6878 13.61 62.6878 13.97V17H64.3878V13.97C64.3878 13.61 64.4811 13.3333 64.6678 13.14C64.8611 12.94 65.1245 12.84 65.4578 12.84C65.7911 12.84 66.0511 12.94 66.2378 13.14C66.4311 13.3333 66.5278 13.61 66.5278 13.97V17H68.2278V13.74C68.2278 12.9933 68.0211 12.41 67.6078 11.99ZM49.3011 57H37.0251V56.296L39.7531 55.372C40.4131 55.196 40.6771 54.8 40.3251 53.832L38.0371 47.276H27.1251L24.6171 53.788C24.2651 54.756 24.5731 55.196 25.1891 55.372L27.9171 56.296V57H18.5451V56.296L19.9531 55.416C20.5251 55.064 20.8331 54.712 21.2291 53.788L32.1851 26.64H36.4971L46.6611 53.876C47.0131 54.8 47.2771 55.064 47.8491 55.416L49.3011 56.296V57ZM50.3186 57H61.9346V56.34L59.3826 55.46C58.8546 55.284 58.8106 55.02 58.8106 54.052V24.616L58.5026 24.396L50.0986 25.54V26.288L52.6946 26.86C53.3546 26.992 53.4866 27.344 53.4866 28.268V54.052C53.4866 54.976 53.3986 55.284 52.8706 55.46L50.3186 56.34V57ZM8.28003 69.2C8.28003 68.6267 8.3867 68.1233 8.60003 67.69C8.82003 67.2567 9.1167 66.9233 9.49003 66.69C9.86336 66.4567 10.28 66.34 10.74 66.34C11.1067 66.34 11.44 66.4167 11.74 66.57C12.0467 66.7233 12.2867 66.93 12.46 67.19V64.6H14.17V72H12.46V71.2C12.3 71.4667 12.07 71.68 11.77 71.84C11.4767 72 11.1334 72.08 10.74 72.08C10.28 72.08 9.86336 71.9633 9.49003 71.73C9.1167 71.49 8.82003 71.1533 8.60003 70.72C8.3867 70.28 8.28003 69.7733 8.28003 69.2ZM20.8371 69.62C20.8571 69.4467 20.8671 69.28 20.8671 69.12C20.8671 68.56 20.7471 68.07 20.5071 67.65C20.2738 67.23 19.9471 66.9067 19.5271 66.68C19.1071 66.4533 18.6271 66.34 18.0871 66.34C17.5338 66.34 17.0438 66.4567 16.6171 66.69C16.1905 66.9233 15.8571 67.2567 15.6171 67.69C15.3838 68.1233 15.2671 68.63 15.2671 69.21C15.2671 69.79 15.3871 70.2967 15.6271 70.73C15.8671 71.1633 16.2005 71.4967 16.6271 71.73C17.0538 71.9633 17.5405 72.08 18.0871 72.08C18.5405 72.08 18.9505 71.9967 19.3171 71.83C19.6838 71.6633 19.9871 71.4333 20.2271 71.14C20.4738 70.8467 20.6438 70.5167 20.7371 70.15H18.9171C18.7505 70.51 18.4538 70.69 18.0271 70.69C17.7405 70.69 17.4971 70.6 17.2971 70.42C17.1038 70.2333 16.9938 69.9667 16.9671 69.62H20.8371ZM36.89 72.08C36.4034 72.08 35.97 71.9967 35.59 71.83C35.21 71.6633 34.91 71.4367 34.69 71.15C34.47 70.8567 34.3467 70.53 34.32 70.17H36.01C36.03 70.3633 36.12 70.52 36.28 70.64C36.44 70.76 36.6367 70.82 36.87 70.82C37.0834 70.82 37.2467 70.78 37.36 70.7C37.48 70.6133 37.54 70.5033 37.54 70.37C37.54 70.21 37.4567 70.0933 37.29 70.02C37.1234 69.94 36.8534 69.8533 36.48 69.76C36.08 69.6667 35.7467 69.57 35.48 69.47C35.2134 69.3633 34.9834 69.2 34.79 68.98C34.5967 68.7533 34.5 68.45 34.5 68.07C34.5 67.75 34.5867 67.46 34.76 67.2C34.94 66.9333 35.2 66.7233 35.54 66.57C35.8867 66.4167 36.2967 66.34 36.77 66.34C37.47 66.34 38.02 66.5133 38.42 66.86C38.8267 67.2067 39.06 67.6667 39.12 68.24H37.54C37.5134 68.0467 37.4267 67.8933 37.28 67.78C37.14 67.6667 36.9534 67.61 36.72 67.61C36.52 67.61 36.3667 67.65 36.26 67.73C36.1534 67.8033 36.1 67.9067 36.1 68.04C36.1 68.2 36.1834 68.32 36.35 68.4C36.5234 68.48 36.79 68.56 37.15 68.64C37.5634 68.7467 37.9 68.8533 38.16 68.96C38.42 69.06 38.6467 69.2267 38.84 69.46C39.04 69.6867 39.1434 69.9933 39.15 70.38C39.15 70.7067 39.0567 71 38.87 71.26C38.69 71.5133 38.4267 71.7133 38.08 71.86C37.74 72.0067 37.3434 72.08 36.89 72.08ZM41.4562 71.73C41.8962 71.9633 42.3895 72.08 42.9362 72.08C43.4829 72.08 43.9762 71.9633 44.4162 71.73C44.8629 71.4967 45.2129 71.1633 45.4662 70.73C45.7262 70.29 45.8562 69.7833 45.8562 69.21C45.8562 68.6367 45.7295 68.1333 45.4762 67.7C45.2229 67.26 44.8762 66.9233 44.4362 66.69C43.9962 66.4567 43.5029 66.34 42.9562 66.34C42.4095 66.34 41.9162 66.4567 41.4762 66.69C41.0362 66.9233 40.6895 67.26 40.4362 67.7C40.1829 68.1333 40.0562 68.6367 40.0562 69.21C40.0562 69.79 40.1795 70.2967 40.4262 70.73C40.6795 71.1633 41.0229 71.4967 41.4562 71.73ZM64.6875 72L62.9874 69.66V72H61.2775V64.6H62.9874V68.69L64.6775 66.42H66.7875L64.4675 69.22L66.8074 72H64.6875ZM71.6791 70.59H69.2591L71.6291 67.78V66.42H67.3691V67.83H69.6691L67.3491 70.64V72H71.6791V70.59Z" fill="black"/>
+          </svg>
+        </div>
+        <div>
+            <h1 class="hero-title poppins-bold">
+                {{ homepage.title|safe }}
+            </h1>
+        </div>
+    </div>
+    <div class="room-2 row-span-2 md:col-span-8 hidden md:flex border-r-[1px] border-gray-300 gap-4">
+        <!-- empty -->
+    </div>
+</section>
+
+<section class="container-default border-y-[1px] border-gray-300">
+    <div class="[ px-6 py-4 md:px-6 md:py-6 ] xl:col-span-12 xl:col-start-5 md:col-span-16 col-span-full flex border-x-[1px] border-gray-300 gap-4">
+        <p class="md:text-sm pb-4 md:p-0 text-sm 2xl:text-lg poppins-regular leading-snug tracking-wider">
+            {{ homepage.subtitle|safe }}
+        </p>
+    </div>
+    <div class="xl:col-span-6 md:col-span-8 [ border-r-[1px] border-gray-300 ]">
+        <!-- Empty -->
+    </div>
+</section>
+
+<!-- BEGIN navigations -->
+<nav class="navigations container-default">
+    <div class="[ hidden ] col-span-4 xl:flex">
+        <button class="js-sidebar-open ps-[1rem] gap-4 flex items-center">
+            <svg width="48" height="22" viewBox="0 0 48 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0H48V3H0V0Z" fill="black"/>
+                <path d="M0 19H48V22H0V19Z" fill="black"/>
+            </svg>
+            <span class="2xl:text-2xl text-xl tracking-widest font-semibold text-black">MENU</span>
+        </button>
+    </div>
+
+    <div class="xl:col-span-12 md:col-span-16 col-span-full flex items-center justify-between xl:justify-end border-x-[1px] border-gray-300">
+        <button class="js-sidebar-open ps-[1.5rem] gap-4 flex xl:hidden items-center" >
+            <svg width="48" height="22" viewBox="0 0 48 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0H48V3H0V0Z" fill="black"/>
+                <path d="M0 19H48V22H0V19Z" fill="black"/>
+            </svg>
+            <span class="[ hidden md:block ] 2xl:text-2xl text-xl tracking-widest font-semibold text-black">MENU</span>
+        </button>
+
+        <div class="flex items-center justify-between gap-3 w-1/3 sm:w-full">
+            <button data-target=".search-modal" class="js-modal-open [ px-3 py-2.5 me-2 ] inline-flex md:hidden ] [ w-full ] [ gap-2 items-center ] cursor-pointer  focus-within:ring-4 focus-within:outline-hidden text-sm hover:bg-gray-300 text-black [ border-[1px] border-gray-300 ] focus-within:ring-gray-200 rounded-sm">
+                <svg width="15" height="15" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5236 8.68L14 12.2063L12.25 14L8.68437 10.521C7.78507 11.0806 6.74671 11.3765 5.6875 11.375C2.54625 11.375 0 8.82263 0 5.6875C0 2.54625 2.55238 0 5.6875 0C8.82875 0 11.375 2.55238 11.375 5.6875C11.3766 6.74498 11.0816 7.78172 10.5236 8.68ZM1.74738 5.6455C1.74738 7.8155 3.50962 9.583 5.68488 9.583C7.85488 9.583 9.62237 7.81988 9.62237 5.6455C9.62237 3.4755 7.85925 1.708 5.68488 1.708C3.51488 1.708 1.74738 3.47025 1.74738 5.6455Z" fill="#3947FF"/>
+                </svg>
+                <span class="[ w-[5rem] md:w-auto ] text-left font-bold tracking-wide uppercase">Поиск</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="[ hidden md:flex ] col-span-8 xl:col-span-6 items-center justify-start border-r-[1px] border-gray-300">
+        <button data-target=".search-modal" class="js-modal-open [ mx-2 px-3.5 py-2.5 ] [ w-full ] [ gap-1.5 inline-flex items-center ] cursor-pointer focus-within:ring-4 focus-within:outline-hidden text-sm hover:bg-gray-300 text-black [ border-[1px] border-gray-300 ] focus-within:ring-gray-200 rounded-sm">
+            <svg width="15" height="15" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5236 8.68L14 12.2063L12.25 14L8.68437 10.521C7.78507 11.0806 6.74671 11.3765 5.6875 11.375C2.54625 11.375 0 8.82263 0 5.6875C0 2.54625 2.55238 0 5.6875 0C8.82875 0 11.375 2.55238 11.375 5.6875C11.3766 6.74498 11.0816 7.78172 10.5236 8.68ZM1.74738 5.6455C1.74738 7.8155 3.50962 9.583 5.68488 9.583C7.85488 9.583 9.62237 7.81988 9.62237 5.6455C9.62237 3.4755 7.85925 1.708 5.68488 1.708C3.51488 1.708 1.74738 3.47025 1.74738 5.6455Z" fill="#3947FF"/>
+            </svg>
+            <span class="font-bold tracking-wide uppercase">Поиск</span>
+        </button>
+    </div>
+</nav>
+<!-- END navigations -->
+
+<!-- BEGIN card -->
+<section class="container-default" x-data="homeCategories">
+
+    <!-- BEGIN title -->
+        <div class="xl:col-start-5 xl:col-span-12 md:col-span-16 col-span-full [ border-b-[1px] border-x-[1px] border-gray-300 ]">
+            <h1 class="tracking-wide text-5xl font-bold px-6 pt-12 pb-6">
+                Каталог
+            </h1>
+        </div>
+        <div class="hidden md:block xl:col-span-6 md:col-span-8 [ border-b-[1px] border-r-[1px] border-gray-300 ]">
+            <!-- Empty -->
+        </div>
+    <!-- END title -->
+
+
+    <!-- empty card -->
+    <div  style="box-shadow: 1px 0 0 var(--color-gray-300)" class="card-offset col-span-4">
+        <div class="p-sm absolute bottom-0 w-full [ border-y-[1px] border-gray-300 ]">
+            <h2 class="[ invisible ] [ py-4 ps-6 ] text-md">category 1</h2>
+        </div>
+    </div>
+
+    <template x-for="c in col(0)" :key="c.id">
+        <article class="card border-r-[1px]">
+            <a :href="`/catalog/${c.slug}/`" class="block">
+                <div class="product-image-container">
+                  <img :src="c.image_default"
+                       class="product-image"
+                       :alt="c.title">
+                </div>
+                <div class="p-sm border-y-[1px] border-gray-300">
+                  <h2 class="pb-8 pt-4 md:py-4 ps-6 text-md font-bold uppercase tracking-wider"
+                      x-text="c.title">
+                  </h2>
+                </div>
+            </a>
+        </article>
+    </template>
+
+    <template x-for="c in col(1)" :key="c.id">
+        <article class="card border-r-[1px]">
+            <a :href="`/catalog/${c.slug}/`" class="block">
+                <div class="product-image-container">
+                  <img :src="c.image_default"
+                       class="product-image"
+                       :alt="c.title">
+                </div>
+                <div class="p-sm border-y-[1px] border-gray-300">
+                  <h2 class="pb-8 pt-4 md:py-4 ps-6 text-md font-bold uppercase tracking-wider"
+                      x-text="c.title">
+                  </h2>
+                </div>
+            </a>
+        </article>
+    </template>
+
+    <template x-for="c in col(2)" :key="c.id">
+        <article class="card border-r-[1px]">
+            <a :href="`/catalog/${c.slug}/`" class="block">
+                <div class="product-image-container">
+                  <img :src="c.image_default"
+                       class="product-image"
+                       :alt="c.title">
+                </div>
+                <div class="p-sm border-y-[1px] border-gray-300">
+                  <h2 class="pb-8 pt-4 md:py-4 ps-6 text-md font-bold uppercase tracking-wider"
+                      x-text="c.title">
+                  </h2>
+                </div>
+            </a>
+        </article>
+    </template>
+
+    <!-- empty card -->
+    <div class="card-offset col-span-2">
+        <div class="p-sm absolute bottom-0 w-full [ border-y-[1px] border-gray-300 ]">
+            <h2 class="[ invisible ] [ py-4 ps-6 ] text-md"></h2>
+        </div>
+    </div>
+    <!-- empty card -->
+</section>
+<!-- END card -->
+
+<!-- BEGIN title -->
+<section class="container-default">
+    <div class="xl:col-start-5 xl:col-span-12 md:col-span-16 col-span-full [ border-x-[1px] border-gray-300 ]">
+        <h1 class="tracking-wide text-5xl font-bold px-6 pt-[4rem] pb-[3rem]">
+            Контакты
+        </h1>
+        <ul class="pb-[4rem] border-t-[1px] border-gray-300">
+            {% for contact in contacts %}
+            <li class="flex items-center justify-between border-b-[1px] border-gray-300 px-6 py-3 font-semibold">
+                <span class="text-sm">{{ contact.name }}</span>
+                <a href="{{ contact.link|safe }}" class="text-sm text-blue-800">
+                    <span>{{ contact.value }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="xl:col-span-6 md:col-span-8 hidden md:block [ border-r-[1px] border-gray-300 ]">
+        <!-- Empty -->
+    </div>
+</section>
+<!-- END title -->
+
+<!-- BEGIN Mozaik rect -->
+<div class="container-default border-t-[1px] border-gray-300 ]">
+    <div class="[ rect-start h-[12rem] ] card-offset hidden xl:block xl:col-span-4"></div>
+    <div class="[ rect-center h-[12rem] ] xl:col-span-12 md:col-span-16 col-span-full"></div>
+    <div class="md:col-span-8 xl:col-span-6 [ border-r-[1px] border-gray-300 ]"></div>
+</div>
+<!-- END Mozaik rect -->
+
+{% endblock %}
