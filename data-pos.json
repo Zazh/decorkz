@@ -6,8 +6,8 @@
     "title": "плинтсуы",
     "parent": null,
     "slug": "plintusy",
-    "image": "",
-    "cropping": ""
+    "image": "category_images/plintusy/plintusy-ac2b4897.jpg",
+    "cropping": "0,0,1024,1024"
   }
 },
 {
@@ -17,8 +17,8 @@
     "title": "рейки",
     "parent": null,
     "slug": "rayki",
-    "image": "",
-    "cropping": ""
+    "image": "category_images/rayki/rayki-54e6ae76.jpg",
+    "cropping": "0,0,1024,1024"
   }
 },
 {
@@ -28,8 +28,8 @@
     "title": "карнизы",
     "parent": null,
     "slug": "karnizy",
-    "image": "",
-    "cropping": ""
+    "image": "category_images/karnizy/karnizy-fc45ca6c.jpg",
+    "cropping": "0,0,700,700"
   }
 },
 {
@@ -771,7 +771,7 @@
     "title": "ADS-53",
     "slug": "ads-53",
     "category": 5,
-    "description": "ADS-53 Скрытый карниз (ГКЛ) - двухрядный  3000мм",
+    "description": "ADS-53<br> Скрытый карниз (ГКЛ) - двухрядный  3000мм",
     "sku": "00033",
     "price": "13950.00"
   }
