@@ -6,6 +6,9 @@ venv/
 /decor
 /web
 
+docker-compose.yml
+aldeso/app/core/settings.py
+decorkz/app/core/settings.py
 
 # Django migrations
 !**/migrations/
