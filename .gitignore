@@ -1,75 +1,4 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-.venv/
 venv/
-ENV/
-env/
-build/
-develop-eggs/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-.DS_Store
-
-!aldeso/app/static/dist/
-
-
-# Logs
-*.log
-logs/
-log/
-
-# Local development settings
-.env
-.env.local
-.env.*.local
-
-# Coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# Docker
-.docker/
-
-# Node
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Build
-build/
-*.pyc
-__pycache__/
 
 # Media
 /decorkz/app/media/
@@ -77,24 +6,6 @@ __pycache__/
 /decor
 /web
 
-.git-backup/
-
-
-# Database
-*.sqlite3
-*.db
-
-# Cache
-.cache/
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Environment
-.env
-.venv/
-venv/
-ENV/
 
 # Django migrations
 !**/migrations/
