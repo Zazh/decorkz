@@ -67,7 +67,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # Build
-dist/
 build/
 *.pyc
 __pycache__/
