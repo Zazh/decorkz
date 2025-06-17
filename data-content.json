@@ -1,0 +1,60 @@
+[
+{
+  "model": "contents.homepage",
+  "pk": 1,
+  "fields": {
+    "title": "Aluminum <br>Decorative <br>Solutions",
+    "subtitle": "Производим алюминиевые профили для скрытого <br class=\"hidden md:block\" />             плинтуса и декоративной отделки высокого качества <br class=\"hidden md:block\" />             Казахстанского производства",
+    "seo_title": "Aluminum Decorative Solutions",
+    "seo_description": "Производим алюминиевые профили для скрытого\r\nплинтуса и декоративной отделки высокого качества\r\nКазахстанского производства"
+  }
+},
+{
+  "model": "contents.contact",
+  "pk": 1,
+  "fields": {
+    "name": "E-mail",
+    "value": "sale@aldeso.kz",
+    "link": "mailto:sale@aldeso.kz",
+    "order": 1
+  }
+},
+{
+  "model": "contents.contact",
+  "pk": 2,
+  "fields": {
+    "name": "Адрес",
+    "value": "Алматы, Сейфулина 8, строение 1",
+    "link": "Nulle",
+    "order": 2
+  }
+},
+{
+  "model": "contents.contact",
+  "pk": 3,
+  "fields": {
+    "name": "Телефон",
+    "value": "+7(7172)51-91-626",
+    "link": "tel:+77076833236",
+    "order": 0
+  }
+},
+{
+  "model": "contents.document",
+  "pk": 1,
+  "fields": {
+    "doc_type": "privacy",
+    "title": "Политика конфиденциальности",
+    "content": "<div class=\"flex flex-col flex-wrap gap-2 pb-6\">\r\n      <div>\r\n        <span class=\"font-bold\">Дата вступления в силу</span>\r\n        <span>19 Мая 2025</span>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"pb-6\">\r\n      <h5 class=\"text-2xl\">\r\n        Настоящая Политика конфиденциальности описывает, как мы собираем, используем и храним информацию о пользователях сайта aldeso.kz.\r\n      </h5>\r\n    </div>\r\n\r\n    <div class=\"pb-6\">\r\n      <h5 class=\"text-2xl font-bold pb-2\">1. Какие данные мы собираем</h5>\r\n      <p class=\"pb-6 \">Мы не собираем персональные данные, такие как имя, адрес электронной почты или номер телефона. Единственные данные, которые мы получаем, собираются с помощью <b>Google Analytics</b> и являются <b>обезличенными</b>.</p>\r\n\r\n      <p class=\"font-bold pb-2\">Google Analytics автоматически собирает:</p>\r\n      <ul class=\"px-6 pb-6\">\r\n        <li>•\tIP-адрес (в анонимизированной форме),</li>\r\n        <li>•\tтип устройства и браузера,</li>\r\n        <li>•\tдлительность посещения,,</li>\r\n        <li>•\tпросмотренные страницы.,</li>\r\n      </ul>\r\n\r\n      <p>Эти данные не позволяют нам идентифицировать вас как личность.</p>\r\n    </div>\r\n\r\n    <div class=\"pb-6\">\r\n      <h5 class=\"text-2xl font-bold pb-2\">2. Цель сбора данных</h5>\r\n      <p class=\"font-bold pb-2\">Сбор данных осуществляется исключительно для:</p>\r\n      <ul class=\"px-6\">\r\n        <li>•\tанализа поведения пользователей на сайте,</li>\r\n        <li>•\tулучшения контента и структуры сайта,</li>\r\n        <li>•\tповышения удобства использования.</li>\r\n      </ul>\r\n    </div>\r\n\r\n    <div class=\"pb-6\">\r\n      <h5 class=\"text-2xl font-bold pb-2\">3. Сторонние сервисы</h5>\r\n      <p class=\"pb-2\">Мы используем только Google Analytics — аналитический сервис от компании Google. С его политикой конфиденциальности можно ознакомиться здесь:\r\n        <a href=\"https://policies.google.com/privacy\">https://policies.google.com/privacy</a>\r\n      </p>\r\n    </div>\r\n\r\n    <div class=\"pb-6\">\r\n      <h5 class=\"text-2xl font-bold pb-2\">4. Безопасность данных</h5>\r\n      <p class=\"pb-2\">\r\n        Мы не передаём ваши данные третьим лицам и принимаем разумные технические меры для их защиты.\r\n      </p>\r\n    </div>\r\n\r\n    <div class=\"pb-6\">\r\n      <h5 class=\"text-2xl font-bold pb-2\">5. Ваши права</h5>\r\n      <p class=\"pb-2\">\r\n        Вы можете отключить сбор аналитики через инструменты блокировки трекеров или запретить cookies в настройках браузера.\r\n      </p>\r\n    </div>\r\n\r\n    <div class=\"pb-6\">\r\n      <h5 class=\"text-2xl font-bold pb-2\">6. Контакты</h5>\r\n      <p class=\"pb-2\">\r\n        По вопросам, связанным с конфиденциальностью, напишите нам: <a class=\"text-blue-700\" href=\"mailto:pravicy@aldeso.kz\">pravicy@aldeso.kz</a>\r\n      </p>\r\n    </div>"
+  }
+},
+{
+  "model": "contents.document",
+  "pk": 2,
+  "fields": {
+    "doc_type": "cookies",
+    "title": "Политика использования файлов cookie",
+    "content": "<div class=\"flex flex-col flex-wrap gap-2 pb-6\">\r\n      <div>\r\n        <span class=\"font-bold\">Дата вступления в силу</span>\r\n        <span>19 Мая 2025</span>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"pb-6\">\r\n      <h5 class=\"text-2xl\">\r\n        Настоящая Политика cookie объясняет, как сайт aldeso.kz использует файлы cookie и аналогичные технологии.\r\n      </h5>\r\n    </div>\r\n\r\n    <div class=\"pb-6\">\r\n      <h5 class=\"text-2xl font-bold pb-2\">1. Что такое cookie?</h5>\r\n      <p>Cookie — это небольшие текстовые файлы, которые сохраняются в браузере пользователя при посещении сайта. Они помогают запоминать предпочтения и обеспечивать корректную работу сайта.</p>\r\n    </div>\r\n\r\n    <div class=\"pb-6\">\r\n        <h5 class=\"text-2xl font-bold pb-2\">2. Какие cookie мы используем?</h5>\r\n        <p class=\"font-bold pb-2\">Мы используем только функциональные cookie:</p>\r\n        <ul class=\"px-6 pb-6\">\r\n            <li>•\tИстория поиска: чтобы сохранить ваши предыдущие поисковые запросы и сделать использование сайта удобнее.</li>\r\n        </ul>\r\n        <p>А также используем аналитические cookie от Google Analytics для сбора обезличенной статистики.</p>\r\n    </div>\r\n\r\n    <div class=\"pb-6\">\r\n      <h5 class=\"text-2xl font-bold pb-2\">3. Как вы можете управлять cookie?</h5>\r\n        <p class=\"font-bold pb-2\">Вы можете:</p>\r\n        <ul class=\"px-6\">\r\n            <li>•\tудалить уже сохранённые cookie через настройки браузера,</li>\r\n            <li>•\tзапретить использование cookie полностью,</li>\r\n            <li>•\tиспользовать режим “инкогнито”, чтобы cookie не сохранялись после закрытия браузера.</li>\r\n        </ul>\r\n    </div>\r\n\r\n    <div class=\"pb-6\">\r\n      <h5 class=\"text-2xl font-bold pb-2\">4. Изменения политики</h5>\r\n      <p class=\"pb-6\">\r\n        Мы можем обновлять настоящую Политику cookie. Изменения вступают в силу сразу после публикации на этой странице.\r\n      </p>\r\n    </div>"
+  }
+}
+]
