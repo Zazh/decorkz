@@ -78,7 +78,9 @@
     <a href="{% url 'product-detail' slug=p.slug %}" role="link">
       <figure>
         {% if p.image %}
-          <img src="{{ p.image }}" class="[ border-[1px] border-gray-300 ] object-cover w-full aspect-square" loading="lazy" alt="{{ p.alt }}" title="{{ p.title_attr }}">
+        <div class="[ border-[1px] border-gray-300 ] aspect-square w-full flex items-center justify-center overflow-hidden">
+          <img src="{{ p.image }}" class="object-cover" loading="lazy" alt="{{ p.alt }}" title="{{ p.title_attr }}">
+        </div>
         {% else %}
           <div class="flex items-center justify-center bg-gray-100 text-gray-400 aspect-square w-full h-auto [ border-[1px] border-gray-300 ]" style="min-height:120px;">
             <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="60px" height="60px" viewBox="0 0 32 32" id="icon"><defs><style>.cls-1{fill:none;}</style></defs><title>no-image</title><path d="M30,3.4141,28.5859,2,2,28.5859,3.4141,30l2-2H26a2.0027,2.0027,0,0,0,2-2V5.4141ZM26,26H7.4141l7.7929-7.793,2.3788,2.3787a2,2,0,0,0,2.8284,0L22,19l4,3.9973Zm0-5.8318-2.5858-2.5859a2,2,0,0,0-2.8284,0L19,19.1682l-2.377-2.3771L26,7.4141Z"/><path d="M6,22V19l5-4.9966,1.3733,1.3733,1.4159-1.416-1.375-1.375a2,2,0,0,0-2.8284,0L6,16.1716V6H22V4H6A2.002,2.002,0,0,0,4,6V22Z"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/></svg>
@@ -118,34 +120,40 @@
 
     <div>
       <nav class="isolate inline-flex -space-x-px rounded-md overflow-hidden shadow-xs" aria-label="Pagination">
-        {% if page_obj.has_previous %}
-        <a href="?page={{ page_obj.previous_page_number }}" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
-          <span class="sr-only">Previous</span>
-          <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-            <path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
-          </svg>
-        </a>
-        {% endif %}
 
-        {% for i in page_obj.paginator.page_range %}
-          {% if page_obj.number == i %}
-                <span aria-current="page" class="relative z-10 inline-flex items-center bg-blue-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ i }}</span>
-          {% else %}
-                <a href="?page={{ i }}" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">{{ i }}</a>
+  {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+      <span class="sr-only">Previous</span>
+      <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+      </svg>
+    </a>
+  {% endif %}
 
-          {% endif %}
-        {% endfor %}
+  {% for i in page_obj.paginator.page_range %}
+{% if i == 1 or i == page_obj.paginator.num_pages or i >= page_obj.number|add:"-1" and i <= page_obj.number|add:"2" %}
+      {% if page_obj.number == i %}
+        <span aria-current="page" class="relative z-10 inline-flex items-center bg-blue-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ i }}</span>
+      {% else %}
+        <a href="?page={{ i }}" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">{{ i }}</a>
+      {% endif %}
+    {% elif i == 2 and page_obj.number > 4 %}
+      <span class="relative inline-flex items-center px-4 py-2 text-sm text-gray-400">...</span>
+    {% elif i == page_obj.paginator.num_pages|add:"-1" and page_obj.number < page_obj.paginator.num_pages|add:"-3" %}
+    {% endif %}
+  {% endfor %}
 
-        {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
-          <span class="sr-only">Next</span>
-          <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-            <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-          </svg>
-        </a>
-        {% endif %}
+  {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+      <span class="sr-only">Next</span>
+      <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+      </svg>
+    </a>
+  {% endif %}
 
-      </nav>
+</nav>
+
     </div>
   </div>
   <!-- END pagination -->
