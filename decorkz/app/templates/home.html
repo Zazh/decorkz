@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% block meta_description %}{{ meta_description }}{% endblock %}
-{% block meta_keywords %}{{ meta_keywords }}{% endblock %}
+{% block meta_description %}Магазин молдингов и декоративных элементов для интерьера. Быстрая доставка по Казахстану.{% endblock %}
+{% block meta_keywords %}молдинги, декор, купить, Казахстан, интерьер, каталог{% endblock %}
 {% block og_title %}{{ og_title }}{% endblock %}
 {% block og_description %}{{ og_description }}{% endblock %}
 {% block og_image %}{{ og_image }}{% endblock %}
@@ -44,7 +44,7 @@
         <article class="col-span-5 md:col-span-2">
             <a :href="`/catalog/${cat.slug}/`">
                 <figure>
-                    <img :src="cat.image_default" :alt="cat.title" :title="cat.title">
+                    <img :src="cat.image_default" :alt="" :title="cat.title">
                     <figcaption class="py-3 flex gap-1 flex-col">
                         <div class="flex items-center justify-between">
                             <h2 class="[ flex flex-col gap-1 ]">
