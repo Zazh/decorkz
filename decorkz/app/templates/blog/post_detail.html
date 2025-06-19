@@ -28,16 +28,38 @@
   </div>
 
   <div class="[ flex gap-8 flex-col ] col-span-full lg:col-span-10 lg:col-start-2 xl:col-span-6 xl:col-start-4">
-    <div class="content">
-    {% for block in post.blocks.all %}
-      {% if block.content_type == 'p' %}
-        <p {% if block.bold %}style="font-weight: bold;"{% endif %}>{{ block.text }}</p>
-      {% elif block.content_type == 'h2' %}
-        <h2 {% if block.bold %}style="font-weight: bold;"{% endif %}>{{ block.text }}</h2>
-      {% elif block.content_type == 'h3' %}
-        <h3 {% if block.bold %}style="font-weight: bold;"{% endif %}>{{ block.text }}</h3>
-      {% endif %}
-    {% endfor %}
+   <div class="content">
+  {% for block in post.blocks.all %}
+    {% if block.content_type == 'p' %}
+      <p {% if block.bold %}style="font-weight: bold;"{% endif %}>{{ block.text|safe }}</p>
+    {% endif %}
+
+    {% if block.content_type == 'h2' %}
+      <h2 {% if block.bold %}style="font-weight: bold;"{% endif %}>{{ block.text|safe }}</h2>
+    {% endif %}
+
+    {% if block.content_type == 'h3' %}
+      <h3 {% if block.bold %}style="font-weight: bold;"{% endif %}>{{ block.text|safe }}</h3>
+    {% endif %}
+
+    {% if block.content_type == 'ul' %}
+      <ul>
+      {% for item in block.text.splitlines %}
+        <li>{{ item|safe }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if block.content_type == 'ol' %}
+      <ol>
+      {% for item in block.text.splitlines %}
+        <li>{{ item|safe }}</li>
+      {% endfor %}
+      </ol>
+    {% endif %}
+  {% endfor %}
+</div>
+
     </div>
   </div>
 </section>

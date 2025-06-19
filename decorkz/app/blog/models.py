@@ -22,6 +22,8 @@ class ContentBlock(models.Model):
         ('p', 'Paragraph'),
         ('h2', 'Heading 2'),
         ('h3', 'Heading 3'),
+        ('ul', 'Unordered List'),
+        ('ol', 'Ordered List'),
     ]
     post = models.ForeignKey(Post, related_name='blocks', on_delete=models.CASCADE)
     content_type = models.CharField(max_length=2, choices=CONTENT_CHOICES)
