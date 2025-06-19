@@ -10,6 +10,7 @@ docker-compose.yml
 aldeso/app/core/settings.py
 decorkz/app/core/settings.py
 decorkz/Dockerfile
+aldeso/Dockerfile
 
 
 # Django migrations
