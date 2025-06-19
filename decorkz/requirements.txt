@@ -3,8 +3,8 @@ easy-thumbnails>=2.10          # поддержка Django 5.1
 django-appconf>=1.0.2          # зависимость image-cropping
 django-image-cropping==1.7     # последняя на PyPI
 python-slugify==8.0.1          # slug
+gunicorn==21.2.0
 
-# Ваши прежние пакеты
 Django==5.2.1
 djangorestframework==3.16.0
 django-filter==25.1
