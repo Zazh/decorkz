@@ -102,7 +102,7 @@
                 {% for attr in other_attributes %}
                     <li class="product-list">
                         <span class="uppercase tracking-wide text-sm font-bold">{{ attr.name }}</span>
-                        <span class="text-gray-500 text-base">{{ attr.value }}</span>
+                        <span class="[ product-attr-value ] text-gray-500 text-base">{{ attr.value }}</span>
                     </li>
                 {% endfor %}
                 {% endif %}
@@ -134,5 +134,22 @@
     </template>
 </section>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('.product-attr-value').forEach(function (el) {
+    // Проверим, есть ли в тексте экспонента
+    const regex = /^-?\d+(\.\d+)?[eE][+-]?\d+$/;
+    let txt = el.textContent.trim();
+
+    if (regex.test(txt)) {
+      let num = Number(txt);
+      // Если целое — просто число, иначе с двумя знаками после запятой
+      el.textContent = (Math.abs(num % 1) < 0.00001) ? String(num) : num.toFixed(2).replace(/\.?0+$/, '');
+    }
+  });
+});
+
+</script>
 
 {% endblock %}
