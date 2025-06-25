@@ -186,8 +186,8 @@ def catalog(request, category_slug=None):
                 "alt": f"{p.category.title} {p.title}",
                 "title_attr": f"{p.category.title} {p.title}",
                 "size": " × ".join([
-                    format_number(next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'высота'), '')),
                     format_number(next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'ширина'), '')),
+                    format_number(next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'высота'), '')),
                     format_number(next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'длина'), '')),
                 ]),
                 "type": next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'вид'), 'не указан'),
