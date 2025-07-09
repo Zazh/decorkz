@@ -1,32 +1,36 @@
-/* static/js/components/sidebar.js */
 import { apiGet } from '../core/api.js';
 
-export default function sidebar () {
+export default function sidebar() {
   return {
     categories: [],
+    mainCategories: [],
+    subCategoriesMap: {},
 
-    get activeSlug () {
+    get activeSlug() {
       return window.location.pathname.split('/').filter(Boolean).pop() || '';
     },
 
-    async init () {
+    async init() {
       try {
         const data = await apiGet('/api/categories/');
-
-        // DRF-пагинация: берём data.results, иначе сам data
         const list = Array.isArray(data) ? data : data.results ?? [];
 
-        /* фильтруем null и дубликаты id */
-        const seen = new Set();
-        this.categories = list.filter(c => {
-          if (!c || c.id == null || seen.has(c.id)) return false;
-          seen.add(c.id);
-          return true;
+        // Главные (root) категории
+        this.mainCategories = list.filter(c => c.parent_id === null);
+
+        // Карта: id главной → список подкатегорий
+        this.subCategoriesMap = {};
+        this.mainCategories.forEach(main => {
+          this.subCategoriesMap[main.id] = list.filter(c => c.parent_id === main.id);
         });
+
+        this.categories = list; // если где-то ещё нужно полный список
 
       } catch (err) {
         console.error('Не удалось загрузить категории', err);
         this.categories = [];
+        this.mainCategories = [];
+        this.subCategoriesMap = {};
       }
     },
   };

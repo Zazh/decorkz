@@ -51,9 +51,37 @@
 
 <section class="container-default" >
     <div class="xl:col-start-5 xl:col-span-12 md:col-span-16 col-span-full [ border-x-[1px] border-gray-300 ]">
-        {% if product.images.first %}
-        <img src="{{ product.images.first.image.url }}" alt="{{ product.title }}" loading="lazy" class="w-full aspect-auto" title="{{ product.title }}">
-        {% endif %}
+
+<div x-data="{ i: 0, images: [
+  {% for img in default_urls %}
+    '{{ img }}'{% if not forloop.last %},{% endif %}
+  {% endfor %}
+] }" class="relative w-full flex items-center justify-center aspect-[100/85] overflow-hidden">
+
+            <template x-for="(src, idx) in images" :key="idx">
+                <img x-show="i === idx" :src="src" alt="{{ product.title }}" class="w-full object-contain transition-all duration-300" loading="lazy">
+            </template>
+
+            <!-- Лево -->
+            <button
+                x-show="images.length > 1"
+                @click="i = i === 0 ? images.length - 1 : i - 1"
+                class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-gray-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+
+            <!-- Право -->
+            <button
+                x-show="images.length > 1"
+                @click="i = i === images.length - 1 ? 0 : i + 1"
+                class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-gray-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
     </div>
 
 </section>

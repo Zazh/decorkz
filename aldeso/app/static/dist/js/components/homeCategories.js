@@ -6,9 +6,10 @@ export default function homeCategories() {
     loading: true,
 
     async init() {
-      // DRF может вернуть либо массив, либо объект { results:[...] }
       const raw = await apiGet('/api/categories/');
-      this.categories = Array.isArray(raw) ? raw : raw.results ?? [];
+      const all = Array.isArray(raw) ? raw : raw.results ?? [];
+      // Оставляем только главные (root) категории
+      this.categories = all.filter(cat => cat.parent_id === null);
       this.loading    = false;
     },
 

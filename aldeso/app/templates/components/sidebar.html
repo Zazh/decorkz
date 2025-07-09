@@ -15,22 +15,36 @@
     </div>
     <div class="px-6 pt-8 flex flex-col gap-4">
         <ul>
-            <li>
+            <li class="border-b-[1px] border-gray-300 pb-2">
                 <a href="/" rel="external" class="block pt-2 font-[500] text-black uppercase">Главная</a>
             </li>
             <li>
-                <p class="block pt-2 pb-0 font-[500] text-black uppercase">Продукция</p>
-                <ol class="pl-2 py-2">
-                    <template x-for="c in categories" :key="c.id">
-                      <li>
-                        <a :href="`/catalog/${c.slug}/`"
-                           :class="activeSlug === c.slug ? 'font-bold text-blue-600' : ''"
-                           class="text-sm font-[500] capitalize"
-                           x-text="c.title">
-                        </a>
-                      </li>
-                    </template>
-                </ol>
+<!--                <p class="block pt-2 pb-2 font-[500] text-black uppercase border-b-[1px] border-gray-300">Продукция</p>-->
+                    <ol>
+                      <template x-for="main in mainCategories" :key="main.id">
+                        <li class="pt-2 pb-0">
+                          <a :href="`/catalog/${main.slug}/`"
+                             :class="activeSlug === main.slug ? 'font-bold text-blue-600' : ''"
+                             class="font-[500] uppercase"
+                             x-text="main.title">
+                          </a>
+
+                          <!-- Подкатегории, если есть -->
+                          <ol class="pl-2 pb-2" x-show="subCategoriesMap[main.id] && subCategoriesMap[main.id].length">
+                            <template x-for="sub in subCategoriesMap[main.id]" :key="sub.id">
+                              <li>
+                                <a :href="`/catalog/${sub.slug}/`"
+                                   :class="activeSlug === sub.slug ? 'font-bold text-blue-600' : ''"
+                                   class="text-sm font-[400] capitalize"
+                                   x-text="sub.title">
+                                </a>
+                              </li>
+                            </template>
+                          </ol>
+                        </li>
+                      </template>
+                    </ol>
+
             </li>
         </ul>
     </div>

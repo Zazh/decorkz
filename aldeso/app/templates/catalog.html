@@ -51,24 +51,21 @@
 </nav>
 <!-- END navigations -->
 
-<!-- BEGIN card -->
-<section class="container-default"
-         id="catalog-root">
-
-        {{ products|json_script:"initial-products" }}
-        {{ categories|json_script:"initial-categories" }}
-
+<div>
     <!-- BEGIN title -->
-    <div class="xl:col-start-5 xl:col-span-12 md:col-span-16 col-span-full [ border-b-[1px] border-x-[1px] border-gray-300 ]">
-<!--        <h1 class="tracking-wide text-5xl font-bold px-6 py-12 uppercase" x-text="currentTitle">-->
-        <h1 class="tracking-wide text-5xl font-bold px-6 py-12 uppercase">
+    <div class="col-span-full [ border-b-[1px] border-x-[1px] border-gray-300 ]">
+        <h1 class="tracking-wide text-5xl font-bold px-6 py-12">
             {{ current_category }}
         </h1>
     </div>
-    <div class="hidden md:block xl:col-span-6 md:col-span-8 [ border-b-[1px] border-r-[1px] border-gray-300 ]">
-        <!-- Empty -->
-    </div>
     <!-- END title -->
+</div>
+
+<!-- BEGIN card -->
+<section class="container-default" id="catalog-root">
+
+        {{ products|json_script:"initial-products" }}
+        {{ categories|json_script:"initial-categories" }}
 
     <!-- Лоадер -->
 
@@ -81,123 +78,42 @@
   <!-- Вывод колоночных списков -->
 {% endif %}
 
-    <div class="xl:col-start-5 xl:col-span-6  md:col-span-8 col-span-full [ border-r-[1px] border-gray-300 ] [ relative overflow-hidden ]">
-        <!-- Псевдоэлемент с тенью поверх всего контента -->
-        <div class="absolute inset-0 pointer-events-none shadow-[inset_1px_0_0_var(--color-gray-300)] z-10"></div>
-
-            {% for p in col1 %}
-            <article class="card">
-                <a href="{% url 'product-detail' slug=p.slug %}" class="block">
-                    <div class="product-image-container">
-                        <img src="{{ p.image }}" class="product-image" alt="{{ p.alt }}" title="{{ p.title_attr }}">
-                    </div>
-                    <div class="p-sm border-y-[1px] border-gray-300 relative">
-                        <h2 class="py-6 px-6 md:py-5 text-xl font-bold uppercase tracking-wider">{{p.title}}</h2>
-                        <ul class="px-6 flex flex-wrap gap-3">
-                            <li class="flex flex-col w-full">
-                                <span class=" tracking-wide text-sm "><span class="uppercase font-bold">Размер</span> <span class="font-bold">(ВхШхД)</span></span>
-                                <span class="text-gray-500 text-base">
-                                    {{ p.size }} мм
-                                </span>
-                            </li>
-                            <li class="flex flex-col w-full">
-                                <span class="uppercase tracking-wide text-sm font-bold">Вид</span>
-                                <span class="text-gray-500 text-base"> {{ p.type|default:"не указан" }} </span>
-                            </li>
-                            <li class="flex flex-col w-full">
-                                <span class="uppercase tracking-wide text-sm font-bold">Цена за п.м</span>
-                                <span class="text-gray-500 text-base">
-                                    <span class="price">{{ p.price }}</span>
-                                    <span>₸</span>
-                                </span>
-                            </li>
-                        </ul>
-                        <div class="pt-8 px-6 pb-12">
-                            <button class="[ w-full flex items-center justify-center ] cursor-pointer focus-within:ring-4 focus-within:outline-hidden px-3.5 py-2.5 text-sm hover:bg-gray-300 bg-white text-black [ border-[1px] border-gray-300 ] focus-within:ring-gray-200 rounded-sm">
-                                <span class="[ w-[5rem] md:w-auto ] font-bold tracking-wide uppercase">Подробнее</span>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-            {% endfor %}
-    </div>
-    <div class="xl:col-span-6  md:col-span-8 col-span-full [ border-r-[1px] border-gray-300 ]">
-            {% for p in col2 %}
-            <article class="card">
-                <a href="{% url 'product-detail' slug=p.slug %}" class="block">
-                    <div class="product-image-container">
-                        <img src="{{ p.image }}" class="product-image" alt="{{ p.alt }}" title="{{ p.title_attr }}">
-                    </div>
-                    <div class="p-sm border-y-[1px] border-gray-300 relative">
-                        <h2 class="py-6 px-6 md:py-5 text-xl font-bold uppercase tracking-wider">{{p.title}}</h2>
-                        <ul class="px-6 flex flex-wrap gap-3">
-                            <li class="flex flex-col w-full">
-                                <span class=" tracking-wide text-sm "><span class="uppercase font-bold">Размер</span> <span class="font-bold">(ВхШхД)</span></span>
-                                <span class="text-gray-500 text-base">
-                                    {{ p.size }} мм
-                                </span>
-                            </li>
-                            <li class="flex flex-col w-full">
-                                <span class="uppercase tracking-wide text-sm font-bold">Вид</span>
-                                <span class="text-gray-500 text-base"> {{ p.type|default:"не указан" }} </span>
-                            </li>
-                            <li class="flex flex-col w-full">
-                                <span class="uppercase tracking-wide text-sm font-bold">Цена за п.м</span>
-                                <span class="text-gray-500 text-base">
-                                    <span class="price">{{ p.price }}</span>
-                                    <span>₸</span>
-                                </span>
-                            </li>
-                        </ul>
-                        <div class="pt-8 px-6 pb-12">
-                            <button class="[ w-full flex items-center justify-center ] cursor-pointer focus-within:ring-4 focus-within:outline-hidden px-3.5 py-2.5 text-sm hover:bg-gray-300 bg-white text-black [ border-[1px] border-gray-300 ] focus-within:ring-gray-200 rounded-sm">
-                                <span class="[ w-[5rem] md:w-auto ] font-bold tracking-wide uppercase">Подробнее</span>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-            {% endfor %}
-    </div>
-    <div class="xl:col-span-6  md:col-span-8 col-span-full [ border-r-[1px] border-gray-300 ]">
-            {% for p in col3 %}
-            <article class="card">
-                <a href="{% url 'product-detail' slug=p.slug %}" class="block">
-                    <div class="product-image-container">
-                        <img src="{{ p.image }}" class="product-image" alt="{{ p.alt }}" title="{{ p.title_attr }}">
-                    </div>
-                    <div class="p-sm border-y-[1px] border-gray-300 relative">
-                        <h2 class="py-6 px-6 md:py-5 text-xl font-bold uppercase tracking-wider">{{p.title}}</h2>
-                        <ul class="px-6 flex flex-wrap gap-3">
-                            <li class="flex flex-col w-full">
-                                <span class=" tracking-wide text-sm "><span class="uppercase font-bold">Размер</span> <span class="font-bold">(ВхШхД)</span></span>
-                                <span class="text-gray-500 text-base">
-                                    {{ p.size }} мм
-                                </span>
-                            </li>
-                            <li class="flex flex-col w-full">
-                                <span class="uppercase tracking-wide text-sm font-bold">Вид</span>
-                                <span class="text-gray-500 text-base"> {{ p.type|default:"не указан" }} </span>
-                            </li>
-                            <li class="flex flex-col w-full">
-                                <span class="uppercase tracking-wide text-sm font-bold">Цена за п.м</span>
-                                <span class="text-gray-500 text-base">
-                                    <span class="price">{{ p.price }}</span>
-                                    <span>₸</span>
-                                </span>
-                            </li>
-                        </ul>
-                        <div class="pt-8 px-6 pb-12">
-                            <button class="[ w-full flex items-center justify-center ] cursor-pointer focus-within:ring-4 focus-within:outline-hidden px-3.5 py-2.5 text-sm hover:bg-gray-300 bg-white text-black [ border-[1px] border-gray-300 ] focus-within:ring-gray-200 rounded-sm">
-                                <span class="[ w-[5rem] md:w-auto ] font-bold tracking-wide uppercase">Подробнее</span>
-                            </button>
-                        </div>
-                    </div>
-                </a>
-            </article>
-            {% endfor %}
-    </div>
+{% for p in col1 %}
+<article class="col-span-full md:col-span-8 xl:col-span-6 border-r-[1px] border-gray-300">
+    <a href="{% url 'product-detail' slug=p.slug %}" class="block">
+        <div class="product-image-container">
+            <img src="{{ p.image }}" class="product-image" alt="{{ p.alt }}" title="{{ p.title_attr }}">
+        </div>
+        <div class="p-sm border-y-[1px] border-gray-300 relative">
+            <h2 class="py-6 px-6 md:py-5 text-xl font-bold uppercase tracking-wider">{{p.title}}</h2>
+            <ul class="px-6 flex flex-wrap gap-3">
+                <li class="flex flex-col w-full">
+                    <span class=" tracking-wide text-sm "><span class="uppercase font-bold">Размер</span> <span class="font-bold">(ВхШхД)</span></span>
+                    <span class="text-gray-500 text-base">
+                        {{ p.size }} мм
+                    </span>
+                </li>
+                <li class="flex flex-col w-full">
+                    <span class="uppercase tracking-wide text-sm font-bold">Вид</span>
+                    <span class="text-gray-500 text-base"> {{ p.type|default:"не указан" }} </span>
+                </li>
+                <li class="flex flex-col w-full">
+                    <span class="uppercase tracking-wide text-sm font-bold">Цена за п.м</span>
+                    <span class="text-gray-500 text-base">
+                        <span class="price">{{ p.price }}</span>
+                        <span>₸</span>
+                    </span>
+                </li>
+            </ul>
+            <div class="pt-8 px-6 pb-12">
+                <button class="[ w-full flex items-center justify-center ] cursor-pointer focus-within:ring-4 focus-within:outline-hidden px-3.5 py-2.5 text-sm hover:bg-gray-300 bg-white text-black [ border-[1px] border-gray-300 ] focus-within:ring-gray-200 rounded-sm">
+                    <span class="[ w-[5rem] md:w-auto ] font-bold tracking-wide uppercase">Подробнее</span>
+                </button>
+            </div>
+        </div>
+    </a>
+</article>
+{% endfor %}
 </section>
 <!-- END card -->
 

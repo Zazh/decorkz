@@ -101,6 +101,7 @@ def format_number(value):
     except (ValueError, TypeError):
         return str(value)
 
+
 def catalog(request, category_slug=None):
     category = None
     categories = list(ProductCategory.objects.values("id", "title", "slug").order_by("title"))
@@ -127,6 +128,21 @@ def catalog(request, category_slug=None):
         if not category:
             category = None
 
+        # Проверяем наличие подкатегорий
+        subcategories = category.children.all().order_by("title") if category else []
+
+        if subcategories.exists():
+            # Если есть подкатегории, сразу отрисовываем шаблон подкатегорий
+            context = {
+                "categories": categories,
+                "current_category": category,
+                "subcategories": subcategories,
+                "seo_title": f"{category.title} — Категории",
+                "seo_description": f"Подкатегории для {category.title}",
+            }
+            return render(request, "catalog_list.html", context)
+
+        # Если нет подкатегорий — показываем товары
         products_qs = Product.objects.filter(category=category).prefetch_related(
             'images', 'attribute_values__attribute'
         )
@@ -175,7 +191,6 @@ def catalog(request, category_slug=None):
         else:
             products_qs = products_qs.order_by('id')
 
-
         products = [
             {
                 "id": p.id,
@@ -186,11 +201,15 @@ def catalog(request, category_slug=None):
                 "alt": f"{p.category.title} {p.title}",
                 "title_attr": f"{p.category.title} {p.title}",
                 "size": " × ".join([
-                    format_number(next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'высота'), '')),
-                    format_number(next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'ширина'), '')),
-                    format_number(next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'длина'), '')),
+                    format_number(
+                        next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'высота'), '')),
+                    format_number(
+                        next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'ширина'), '')),
+                    format_number(
+                        next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'длина'), '')),
                 ]),
-                "type": next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'вид'), 'не указан'),
+                "type": next((a.value for a in p.attribute_values.all() if a.attribute.name.lower() == 'вид'),
+                             'не указан'),
             }
             for p in products_qs
         ]
@@ -199,8 +218,6 @@ def catalog(request, category_slug=None):
 
         seo_title = f"{category.title} — Купить по лучшей цене"
         seo_description = f"{category.title}: широкий ассортимент по доступным ценам."
-
-        # Для шаблона, чтобы проще было сравнивать выбранные значения
         vid_values = attribute_values.get('вид', [])
 
     context = {
@@ -223,7 +240,9 @@ def catalog(request, category_slug=None):
         "podsvetka_selected": podsvetka_selected,
         "podsvetka_values": attribute_values.get('подсветка', []),
     }
+
     return render(request, "catalog.html", context)
+
 
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)
@@ -232,6 +251,10 @@ def product_detail(request, slug):
 
     # Сортируем их по привычному порядку (чтобы всегда было В, Ш, Д, потом остальные):
     attrs_map = {a.attribute.name.lower(): a.value for a in attributes}
+
+    # Получаем все изображения
+    images = product.images.all()  # ← вот тут список всех картинок
+    default_urls = [img.thumb('default') for img in images]
 
     # Формируем структуру для шаблона
     sizes = {
@@ -260,5 +283,9 @@ def product_detail(request, slug):
         "vid": vid,
         "podsvetka": podsvetka,
         "other_attributes": other_attributes,
+        "images": images,  # ← добавь это
+        "default_urls": default_urls,
+
+
     }
     return render(request, "product.html", context)
