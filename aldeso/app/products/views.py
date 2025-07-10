@@ -138,7 +138,7 @@ def catalog(request, category_slug=None):
                 "current_category": category,
                 "subcategories": subcategories,
                 "seo_title": f"{category.title} — Категории",
-                "seo_description": f"Подкатегории для {category.title}",
+                "seo_description": f"{category.title}",
             }
             return render(request, "catalog_list.html", context)
 
