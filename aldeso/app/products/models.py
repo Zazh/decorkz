@@ -43,14 +43,22 @@ class ProductCategory(models.Model):
     def thumb(self, alias="preview"):
         if not self.image:
             return ""
-        return get_thumbnailer(self.image)[alias].url
+        try:
+            return get_thumbnailer(self.image)[alias].url
+        except Exception:
+            # Файла нет — просто возвращаем пусто, чтобы не падало
+            return ""
 
     # чтобы видеть превью в админке
     def thumbnail_preview(self):
-        if self.image:
+        try:
             url = self.thumb("preview")
-            return mark_safe(f'<img src="{url}" style="height:80px">')
+            if url:
+                return mark_safe(f'<img src="{url}" style="height:80px">')
+        except Exception:
+            pass
         return "—"
+
     thumbnail_preview.short_description = "Превью"
 
     def __str__(self):
