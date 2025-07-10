@@ -89,7 +89,24 @@ FILTER_CONFIG = {
             {"label": "5000₸ - 10 000₸", "value": "5000-10000"},
             {"label": "10 000₸ +", "value": "10000-"},
         ],
-        "length": [],
+        "length": [
+            {"label": "Все", "value": ""},
+            {"label": "до 2500 мм", "value": "0-2500"},
+            {"label": "2500-4000 мм", "value": "2500-4000"},
+            {"label": "4000+ мм", "value": "4000-"},
+        ],
+        "width": [
+            {"label": "Все", "value": ""},
+            {"label": "до 20 мм", "value": "0-20"},
+            {"label": "20-40 мм", "value": "20-40"},
+            {"label": "40+ мм", "value": "40-"},
+        ],
+        "height": [
+            {"label": "Все", "value": ""},
+            {"label": "до 20 мм", "value": "0-20"},
+            {"label": "20-50 мм", "value": "20-50"},
+            {"label": "50+ мм", "value": "50-"},
+        ],
         "attributes": []
     }
 }

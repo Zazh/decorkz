@@ -78,7 +78,7 @@
   <!-- Вывод колоночных списков -->
 {% endif %}
 
-{% for p in col1 %}
+{% for p in products %}
 <article class="col-span-full md:col-span-8 xl:col-span-6 border-r-[1px] border-gray-300">
     <a href="{% url 'product-detail' slug=p.slug %}" class="block">
         <div class="product-image-container">
