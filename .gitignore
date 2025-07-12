@@ -8,6 +8,7 @@ venv/
 
 # scripts for prod server
 server-scripts/
+restart.sh
 
 docker-compose.yml
 aldeso/app/core/settings.py
