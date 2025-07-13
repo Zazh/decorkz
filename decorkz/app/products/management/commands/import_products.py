@@ -1,132 +1,81 @@
-from django.core.management.base import BaseCommand, CommandError
-from django.core.files import File
-from decimal import Decimal, InvalidOperation
+from django.core.management.base import BaseCommand
+from products.models import Product, Attribute, ProductAttributeValue, ProductCategory
+from decimal import Decimal
 import csv
 import os
-import glob
-
-from products.models import ProductCategory, Product, ProductImage, Attribute, ProductAttributeValue
-from core.utils import unique_slug, slug as custom_slugify
-
 
 class Command(BaseCommand):
-    help = "Импорт продуктов из CSV-файла, создание подкатегорий, изображений и атрибутов."
+    help = 'Импорт товаров из CSV'
 
     def add_arguments(self, parser):
-        parser.add_argument('csv_file', type=str, help='Путь к CSV-файлу с данными, собранными парсером')
-        parser.add_argument('--parent', type=str, required=True, help='Slug родительской категории (обязателен)')
-        parser.add_argument('--images-root', type=str, dest='images_root', default=None,
-                            help='Абсолютный путь к корневой папке с изображениями продуктов')
-        parser.add_argument('--default-attr-type', type=str, dest='default_attr_type', default='str',
-                            help='Тип создаваемых атрибутов по умолчанию ("str", "int", "decimal", "bool")')
+        parser.add_argument('csv_file', type=str, help='Путь к CSV файлу')
 
     def handle(self, *args, **options):
-        csv_path = options['csv_file']
-        parent_slug = options['parent']
-        images_root = options.get('images_root')
-        default_attr_type = options.get('default_attr_type', 'str')
+        csv_file_path = options['csv_file']
+        if not os.path.exists(csv_file_path):
+            self.stderr.write(f"Файл не найден: {csv_file_path}")
+            return
 
-        if not os.path.isfile(csv_path):
-            raise CommandError(f"CSV файл не найден: {csv_path}")
+        with open(csv_file_path, 'r', encoding='utf-8-sig') as csvfile:
+            reader = list(csv.reader(csvfile, delimiter=';'))
 
-        try:
-            parent_category = ProductCategory.objects.get(slug=parent_slug)
-        except ProductCategory.DoesNotExist:
-            raise CommandError(f"Родительская категория с slug '{parent_slug}' не найдена")
+        product_names = reader[0][1:]  # названия товаров (B-L)
+        categories = reader[1][1:]     # названия категорий (B-L)
 
-        with open(csv_path, newline='', encoding='utf-8-sig') as csvfile:
-            reader = csv.DictReader(csvfile)
-            if reader.fieldnames is None:
-                raise CommandError("CSV файл пустой или не содержит заголовков")
+        print('Названия товаров:', product_names)
+        print('Категории:', categories)
 
-            for row in reader:
-                title = (row.get('title') or row.get('название') or '').strip()
-                category_name = (row.get('category') or row.get('категория') or '').strip()
-                price_str = (row.get('price') or row.get('цена') or '').strip()
-                description = (row.get('description') or row.get('описание') or '').strip()
-                sku = (row.get('sku') or row.get('артикул') or '').strip()
+        for col_index, (product_name, category_name) in enumerate(zip(product_names, categories), start=1):
+            if not product_name or not product_name.strip():
+                continue
+            if not category_name or not category_name.strip():
+                print(f"Пропуск товара {product_name}: не указана категория")
+                continue
 
-                if not sku:
-                    self.stdout.write(self.style.WARNING(f"Строка пропущена: отсутствует артикул товара (название: {title or 'не указано'})"))
-                    continue
+            # Получаем/создаём категорию
+            category, _ = ProductCategory.objects.get_or_create(
+                title=category_name.strip()
+            )
 
-                if not category_name:
-                    self.stdout.write(self.style.WARNING(f"Строка пропущена: не указана категория (товар: {title or sku})"))
-                    continue
-
-                subcat_slug = custom_slugify(category_name)
-                subcategory, subcat_created = ProductCategory.objects.get_or_create(
-                    parent=parent_category, slug=subcat_slug, defaults={'title': category_name})
-                if subcat_created:
-                    self.stdout.write(self.style.SUCCESS(f"Создана новая подкатегория '{category_name}' (slug: {subcat_slug})"))
-
-                base_slug = custom_slugify(title) if title else sku
-                unique_product_slug = unique_slug(None, base_slug, model=Product)
-
-                product_data = {
-                    'title': title,
-                    'slug': unique_product_slug,
-                    'category': subcategory,
-                    'sku': sku
+            product, created = Product.objects.get_or_create(
+                title=product_name.strip(),
+                defaults={
+                    'price': Decimal('0.00'),
+                    'category': category,
                 }
+            )
+            self.stdout.write(f"{'Создан' if created else 'Обновлён'} товар: {product.title} (категория: {category.title})")
 
-                if price_str:
-                    price_str = price_str.replace(',', '.')
-                    try:
-                        product_data['price'] = Decimal(price_str)
-                    except InvalidOperation:
-                        self.stdout.write(self.style.WARNING(f"Цена '{price_str}' для товара '{title}' не распознана"))
-
-                if description:
-                    product_data['description'] = description
-
-                product, created = Product.objects.get_or_create(sku=sku, defaults=product_data)
-                if not created:
-                    self.stdout.write(self.style.WARNING(f"Товар с артикулом '{sku}' уже существует"))
+            # Перебор характеристик для этого товара
+            for row in reader[2:]:
+                attr_name = row[0].strip().lower()
+                if col_index >= len(row):
+                    continue
+                attr_value = row[col_index].strip()
+                if not attr_value or attr_value == '-':
                     continue
 
-                self.stdout.write(self.style.SUCCESS(f"Создан товар: '{title}' (sku: {sku}, slug: {unique_product_slug})"))
+                # # Определяем value_type
+                # value_clean = attr_value.strip().lower()
+                # if value_clean in ['да', 'нет']:
+                #     value_type = 'bool'
+                # else:
+                #     value_type = 'str'
 
-                if images_root:
-                    product_img_dir = os.path.join(images_root, sku)
-                    if os.path.isdir(product_img_dir):
-                        # Список всех файлов-картинок в папке
-                        for image_path in sorted(glob.glob(os.path.join(product_img_dir, '*'))):
-                            filename = os.path.basename(image_path)
+                # Создаём характеристику при необходимости
+                attribute, attr_created = Attribute.objects.get_or_create(
+                    name=attr_name,
+                    defaults={'value_type': 'str'}
+                )
+                if attr_created:
+                    self.stdout.write(f"Создан атрибут: {attribute.name}")
 
-                            # Получаем имя без расширения
-                            name, ext = os.path.splitext(filename)
-                            ext = ext.lower()
-                            # Пропускаем если не картинка
-                            if ext not in ('.jpg', '.jpeg', '.png', '.webp'):
-                                continue
+                pav, pav_created = ProductAttributeValue.objects.update_or_create(
+                    product=product,
+                    attribute=attribute,
+                    defaults={'value': attr_value}
+                )
+                action = 'создано' if pav_created else 'обновлено'
+                self.stdout.write(f"Значение {action}: {attribute.name} = {attr_value}")
 
-                            # Пропускаем только main (без цифр), но загружаем main1, main2 и т.п.
-                            if name.lower() == 'main':
-                                continue
-
-                            image_name = f"{sku}_{filename}"
-                            with open(image_path, 'rb') as img_file:
-                                product_image = ProductImage(product=product, is_main=False)
-                                product_image.image.save(image_name, File(img_file), save=True)
-                            self.stdout.write(self.style.SUCCESS(
-                                f"Добавлено изображение '{filename}' для товара '{title}'"
-                            ))
-
-                for key, value in row.items():
-                    if key.endswith('(значение)') and value:
-                        attr_name = key[:-len('(значение)')].strip()
-                        attribute, attr_created = Attribute.objects.get_or_create(
-                            name=attr_name, defaults={'value_type': default_attr_type}
-                        )
-                        if attr_created:
-                            self.stdout.write(self.style.SUCCESS(f"Создан атрибут '{attr_name}'"))
-
-                        try:
-                            ProductAttributeValue.objects.create(product=product, attribute=attribute,
-                                                                 value=value.strip())
-                        except Exception as e:
-                            self.stdout.write(self.style.ERROR(
-                                f"Ошибка при создании атрибута '{attr_name}' для товара '{sku}' (value: '{value}'): {e}"
-                            ))
-
+        self.stdout.write(self.style.SUCCESS('Импорт завершён!'))

@@ -20,10 +20,11 @@ aldeso/app/media/
 
 # fix duplicate
 backups/duplicate_remove/delete_duplicates.sh
-decorkz/app/fixtures/
 backups/duplicate_remove/dupe_groups.txt
 backups/duplicate_remove/used_files.txt
 decorkz/app/products/management/commands/fix_duplicates.py
+
+decorkz/app/csvs
 
 
 # Django migrations

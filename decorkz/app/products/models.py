@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from django.utils.safestring import mark_safe
 from easy_thumbnails.files import get_thumbnailer
 from image_cropping import ImageRatioField
@@ -17,6 +18,9 @@ class ProductCategory(models.Model):
     title  = models.CharField("Название категории", max_length=100)
     parent = models.ForeignKey("self", null=True, blank=True, related_name="children", on_delete=models.CASCADE)
     slug   = models.SlugField(unique=True, blank=True)
+
+    create = models.DateTimeField(default=timezone.now)
+    update = models.DateTimeField(default=timezone.now)
 
     # ───── NEW ─────
     image    = models.ImageField("Изображение", blank=True, upload_to=category_image_upload_path)
@@ -68,6 +72,9 @@ class Attribute(models.Model):
     slug = models.SlugField(unique=True, blank=True)
     value_type = models.CharField("Тип", max_length=10, choices=VALUE_TYPES, default="str")
 
+    create = models.DateTimeField(default=timezone.now)
+    update = models.DateTimeField(default=timezone.now)
+
     class Meta:
         verbose_name = "Атрибут"
         verbose_name_plural = "Атрибуты"
@@ -81,6 +88,41 @@ class Attribute(models.Model):
         return self.name
 
 
+# Attribute Templates
+class AttributeTemplate(models.Model):
+    title = models.CharField('Название шаблона', max_length=100)
+    is_base = models.BooleanField('Базовый шаблон', default=False)
+    categories = models.ManyToManyField(
+        ProductCategory, verbose_name='Категории', related_name='attribute_templates', blank=True
+    )
+
+    class Meta:
+        verbose_name = "Шаблон характеристик"
+        verbose_name_plural = "Шаблоны характеристик"
+
+    def save(self, *args, **kwargs):
+        if self.is_base:
+            AttributeTemplate.objects.filter(is_base=True).exclude(pk=self.pk).update(is_base=False)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.title
+
+
+class AttributeGroup(models.Model):
+    template = models.ForeignKey(
+        AttributeTemplate, related_name='groups', on_delete=models.CASCADE
+    )
+    title = models.CharField('Название группы', max_length=100)
+    attributes = models.ManyToManyField(Attribute, verbose_name='Характеристики')
+
+    class Meta:
+        verbose_name = "Группа характеристик"
+        verbose_name_plural = "Группы характеристик"
+
+    def __str__(self):
+        return f"{self.template.title} → {self.title}"
+
 # ---- PRODUCT ------------------------------------------------------------
 class Product(models.Model):
     title = models.CharField("Название товара", max_length=255)
@@ -90,9 +132,11 @@ class Product(models.Model):
     # description = models.TextField(blank=True)
     description = models.TextField(blank=True)
 
-
     sku = models.CharField(unique=True, blank=True, max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    create = models.DateTimeField(default=timezone.now)
+    update = models.DateTimeField(default=timezone.now)
 
     class Meta:
         ordering = ["title"]
@@ -120,6 +164,32 @@ class Product(models.Model):
         if old_slug and old_slug != self.slug:
             for img in self.images.all():
                 img.rename_file(self.slug)
+
+    def get_attribute_groups(self):
+        template = (
+                AttributeTemplate.objects
+                .filter(categories=self.category)
+                .first()
+                or AttributeTemplate.objects.filter(is_base=True).first()
+        )
+
+        if not template:
+            return {}
+
+        grouped_attrs = {}
+        grouped_attr_ids = set()
+
+        for group in template.groups.prefetch_related('attributes'):
+            attrs = self.attribute_values.filter(attribute__in=group.attributes.all())
+            grouped_attrs[group.title] = attrs
+            grouped_attr_ids.update(attrs.values_list('attribute_id', flat=True))
+
+        # Дополнительные характеристики (не вошедшие в группы)
+        additional_attrs = self.attribute_values.exclude(attribute_id__in=grouped_attr_ids)
+        if additional_attrs.exists():
+            grouped_attrs['Дополнительно'] = additional_attrs
+
+        return grouped_attrs
 
     def __str__(self):
         return self.title

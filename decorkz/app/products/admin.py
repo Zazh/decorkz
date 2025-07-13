@@ -3,7 +3,7 @@ from django import forms
 from image_cropping import ImageCroppingMixin
 from .models import (
     ProductCategory, Product, Attribute,
-    ProductImage, ProductAttributeValue
+    ProductImage, ProductAttributeValue, AttributeTemplate, AttributeGroup
 )
 
 class ProductImageInline(ImageCroppingMixin, admin.TabularInline):
@@ -50,3 +50,16 @@ class ProductAttributeInline(admin.TabularInline):
     form   = ProductAttributeValueForm
     extra  = 0
     autocomplete_fields = ["attribute"]
+
+@admin.register(AttributeGroup)
+class AttributeGroupAdmin(admin.ModelAdmin):
+    list_display = ('title', 'template')
+    search_fields = ('title', 'template__title')
+    autocomplete_fields = ['template', 'attributes']
+
+@admin.register(AttributeTemplate)
+class AttributeTemplateAdmin(admin.ModelAdmin):
+    list_display = ('title', 'is_base')
+    list_editable = ('is_base',)
+    search_fields = ('title',)
+    filter_horizontal = ('categories',)

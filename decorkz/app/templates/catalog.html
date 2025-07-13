@@ -89,16 +89,24 @@
         <figcaption class="py-3 flex gap-1 flex-col">
           <div class="flex items-center justify-between">
             <h2 class="[ flex flex-col gap-1 ]">
-              <span class="text-md uppercase font-bold [ title-product ]">{{p.title}}</span>
+              <span class="text-md uppercase font-bold [ title-product ]">{{p.title|truncatechars:28}}</span>
             </h2>
           </div>
           <p class="text-sm text-gray-500 font-medium flex gap-2 ]">
+            {% if p.price == 0 %}
+            <span class="price">Нет в наличии</span>
+            {% else %}
             <span><span class="price">{{ p.price }}</span> ₸</span>
+            {% endif %}
           </p>
         </figcaption>
       </figure>
     </a>
   </article>
+  {% empty %}
+    <div class="col-span-full py-8 text-center text-gray-400 text-lg" style="height:70vh">
+        Нет товаров
+    </div>
   {% endfor %}
 
   <!-- BEGIN pagination -->
@@ -131,15 +139,15 @@
   {% endif %}
 
   {% for i in page_obj.paginator.page_range %}
-{% if i == 1 or i == page_obj.paginator.num_pages or i >= page_obj.number|add:"-1" and i <= page_obj.number|add:"2" %}
-      {% if page_obj.number == i %}
-        <span aria-current="page" class="relative z-10 inline-flex items-center bg-blue-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ i }}</span>
-      {% else %}
-        <a href="?page={{ i }}" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">{{ i }}</a>
-      {% endif %}
-    {% elif i == 2 and page_obj.number > 4 %}
-      <span class="relative inline-flex items-center px-4 py-2 text-sm text-gray-400">...</span>
-    {% elif i == page_obj.paginator.num_pages|add:"-1" and page_obj.number < page_obj.paginator.num_pages|add:"-3" %}
+      {% if i == 1 or i == page_obj.paginator.num_pages or i >= page_obj.number|add:"-1" and i <= page_obj.number|add:"2" %}
+        {% if page_obj.number == i %}
+          <span aria-current="page" class="relative z-10 inline-flex items-center bg-blue-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ i }}</span>
+        {% else %}
+          <a href="?page={{ i }}" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50 focus:z-20 focus:outline-offset-0">{{ i }}</a>
+        {% endif %}
+      {% elif i == 2 and page_obj.number > 4 %}
+        <span class="relative inline-flex items-center px-4 py-2 text-sm text-gray-400">...</span>
+      {% elif i == page_obj.paginator.num_pages|add:"-1" and page_obj.number < page_obj.paginator.num_pages|add:"-3" %}
     {% endif %}
   {% endfor %}
 

@@ -11,7 +11,7 @@ from .filters_config import FILTER_CONFIG
 from django.core.paginator import Paginator
 
 from .services import StandardResultsSetPagination
-from .models import Product, ProductCategory, ProductAttributeValue, Attribute
+from .models import Product, ProductCategory, ProductAttributeValue, Attribute, AttributeGroup
 from .serializers import ProductSerializer, CategorySerializer
 from django_filters.rest_framework import DjangoFilterBackend, BooleanFilter
 
@@ -271,6 +271,12 @@ def product_detail(request, slug):
     # Загружаем все связанные атрибуты одной строкой:
     attributes = product.attribute_values.select_related('attribute')
 
+    base_group_name = AttributeGroup.objects.filter(
+        template__is_base=True).first().title  # если есть только один базовый
+
+    # атрибуты группы
+    attribute_groups = product.get_attribute_groups()
+
     # Сортируем их по привычному порядку (чтобы всегда было В, Ш, Д, потом остальные):
     attrs_map = {a.attribute.name.lower(): a.value for a in attributes}
 
@@ -325,5 +331,8 @@ def product_detail(request, slug):
         "podsvetka": podsvetka,
         "other_attributes": other_attributes,
         "category_chain": category_chain,  # цепочка категорий для хлебных крошек
+        "attribute_groups": attribute_groups,
+        'base_group_name': base_group_name,
+
     }
     return render(request, "product.html", context)
