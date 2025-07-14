@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
 
+from products.models import ProductCategory, Product
+
 def post_list(request):
     posts = Post.objects.order_by('-publish_date')
     return render(request, 'blog/post_list.html', {
@@ -37,10 +39,12 @@ def post_detail(request, slug):
 
 
 def home(request):
+    categories = ProductCategory.objects.filter(parent__isnull=True).order_by("title")
     posts = Post.objects.order_by('-publish_date')[:4]
     latest = posts[0] if posts else None
     carousel_posts = posts[1:] if posts.count() > 1 else []
     return render(request, 'home.html', {
         'latest': latest,
         'carousel_posts': carousel_posts,
+        "categories": categories,
     })

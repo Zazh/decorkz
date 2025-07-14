@@ -113,8 +113,9 @@ def format_number(value):
     except (ValueError, TypeError):
         return str(value)
 
+
 def catalog_root(request):
-    categories = ProductCategory.objects.filter(parent=None).order_by('title')
+    categories = ProductCategory.objects.filter(parent__isnull=True).order_by("title")
     return render(request, "catalog_root.html", {
         "categories": categories,
         "og_title": "Каталог товаров — Decorkz.kz",

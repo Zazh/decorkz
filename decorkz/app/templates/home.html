@@ -35,27 +35,31 @@
     <div id="drag-cursor" class="pointer-events-none fixed z-50 hidden"></div>
 </section>
 
-<section class="pb-[4rem] md:pb-[10rem]" x-data="homeCategories()" x-init="init()">
+<section class="pb-[4rem] md:pb-[10rem]">
     <div class="px-4">
         <h1 class="text-4xl md:text-6xl font-medium pt-[4rem] pb-[2rem] md:pt-[8rem] md:pb-[4rem]">Категории</h1>
     </div>
     <div class="grid grid-cols-10 px-4 gap-4 border-t-[1px] border-gray-300">
-        <template x-for="cat in categories" :key="cat.id">
+        {% for cat in categories %}
         <article class="col-span-5 md:col-span-2">
-            <a :href="`/catalog/${cat.slug}/`">
+            <a href="{% url 'catalog-by-slug' cat.slug %}">
                 <figure>
-                    <img :src="cat.image_default" alt="" :title="cat.title">
+                    {% if cat.image %}
+                        <img src="{{ cat.thumb }}" title="{{ cat.title }}">
+                    {% endif %}
                     <figcaption class="py-3 flex gap-1 flex-col">
                         <div class="flex items-center justify-between">
                             <h2 class="[ flex flex-col gap-1 ]">
-                                <span class="text-sm uppercase font-bold" x-text="cat.title"></span>
+                                <span class="text-sm uppercase font-bold">{{ cat.title }}</span>
                             </h2>
                         </div>
                     </figcaption>
                 </figure>
             </a>
         </article>
-    </template>
+        {% empty %}
+            <div>Нет категорий</div>
+        {% endfor %}
     </div>
 </section>
 
