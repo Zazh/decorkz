@@ -135,7 +135,7 @@
       <h4 class="text-sm font-medium text-gray-500">Артикул: <span>{{ product.sku }}</span></h4>
       {% if product.description %}
         <p class="pt-4 text-sm">
-          {{ product.description }}
+          {{ product.description|safe }}
         </p>
       {% endif %}
     </div>
